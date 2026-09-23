@@ -15021,7 +15021,7 @@
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url(../fonts/fa-duotone-900.html) format("woff2"), url(../fonts/fa-duotone-901.html) format("truetype")
+    src: url(../fonts/fa-duotone-900.woff2) format("woff2"), url(../fonts/fa-duotone-900.ttf) format("truetype")
 }
 
 .fa-duotone,
@@ -31545,7 +31545,7 @@
     font-family: "Font Awesome 5 Duotone";
     font-display: block;
     font-weight: 900;
-    src: url(../fonts/fa-duotone-900.html) format("woff2"), url(../fonts/fa-duotone-901.html) format("truetype")
+    src: url(../fonts/fa-duotone-900.woff2) format("woff2"), url(../fonts/fa-duotone-900.ttf) format("truetype")
 }
 
 @font-face {

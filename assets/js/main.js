@@ -39,6 +39,7 @@
 				img = document.images,
 				c = 0,
 				tot = img.length;
+			if (!ovrl || !prog || !number) return;
 			if (tot == 0) return doneLoading();
 
 			function imgLoaded() {
@@ -1301,7 +1302,7 @@
 
 
 
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TweenMax, ScrollToPlugin);
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TweenMax);
 	
 	gsap.config({
 		nullTargetWarn: false,
@@ -1483,54 +1484,6 @@
 
 		
 	function mediaSize() {
-
-		if ($(window).width() > 1199) {
-			console.log('hi')
-			if ($('#pagepiling').length > 0) {
-				
-				$('#pagepiling').pagepiling({
-					menu: '#onePageMenu',
-					anchors: ['cases', 'about', 'services', 'projects', 'skills', 'testimonial', 'contact'],
-					navigation: {
-						'position': 'right',
-						'tooltips': ['Cases', 'About', 'Services', 'Projects', 'Testimonial', 'Contact']
-					},
-					afterRender: function () {
-						$('#pp-nav').addClass('custom');
-						pageScrollIndecator();
-					},
-					onLeave: function () {
-						pageScrollIndecator();
-					},
-					afterLoad: function (anchorLink, index) {
-						if (index > 1) {
-							$('#pp-nav').removeClass('custom');
-						} else {
-							$('#pp-nav').addClass('custom');
-						}
-
-					}
-				});
-
-				function pageScrollIndecator() {
-					var allSection = $('#pagepiling .section');
-					var sectionCount = parseInt(allSection.length);
-
-					var activeSection = $('#pagepiling').children('.section.active');
-					var activeCount = allSection.index(activeSection);
-
-					var activeIndex = parseInt(activeCount) + 1;
-					var scale = (activeIndex / sectionCount).toFixed(3);
-
-					$('.pagescroll-indication span').css({
-						'transform': 'scaleY(' + scale + ')'
-					});
-				}
-
-			}
-
-		};
-
 		if (window.matchMedia('(min-width: 768px)').matches) {
 			const panels = document.querySelectorAll('.col-custom')
 			panels.forEach(panel => {

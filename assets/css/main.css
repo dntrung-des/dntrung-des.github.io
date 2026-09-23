@@ -861,7 +861,7 @@ div.demo img {
 }
 
 .body-overlay:hover {
-  cursor: url("../img/icon/cross-out.html"), pointer;
+  cursor: pointer;
 }
 
 .body-overlay.opened {
@@ -8027,33 +8027,27 @@ a.ui-button:active {
 .ui-icon,
 .ui-widget-content .ui-icon,
 .ui-widget-header .ui-icon {
-  background-image: url("images/ui-icons_444444_256x240.html");
 }
 
 .ui-button:focus .ui-icon,
 .ui-button:hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-state-hover .ui-icon {
-  background-image: url("images/ui-icons_555555_256x240.html");
 }
 
 .ui-button:active .ui-icon,
 .ui-state-active .ui-icon {
-  background-image: url("images/ui-icons_ffffff_256x240.html");
 }
 
 .ui-button .ui-state-highlight.ui-icon,
 .ui-state-highlight .ui-icon {
-  background-image: url("images/ui-icons_777620_256x240.html");
 }
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-  background-image: url("images/ui-icons_cc0000_256x240.html");
 }
 
 .ui-button .ui-icon {
-  background-image: url("images/ui-icons_777777_256x240.html");
 }
 
 .ui-icon-blank {
@@ -14965,35 +14959,6 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
   background-color: #FF3636;
 }
 
-#pagepiling .section.active .tp-hero-2__exp-subtitle,
-#pagepiling .section.active .tp-hero-2__exp-title,
-#pagepiling .section.active .tp-hero-2__exp-info .child-1,
-#pagepiling .section.active .tp-hero-2__exp-info .child-2,
-#pagepiling .section.active .tp-hero-2__exp-link,
-#pagepiling .section.active .tp-hero-2__exp-brand-wrap {
-  animation-name: fadeInUp;
-  animation-fill-mode: both;
-}
-
-#pagepiling .section.active .tp-hero-2__exp-thumb-wrap {
-  animation-name: fadeInLeft;
-  animation-fill-mode: both;
-}
-
-#pagepiling .section.active .tp-hero-2__boder-circle span {
-  animation-name: fadeInUp;
-  animation-fill-mode: both;
-}
-
-#pagepiling .section.active .tp-hero-2__boder-circle.tp-hero-2__boder-circle-tr span {
-  animation-name: fadeInDown;
-  animation-fill-mode: both;
-}
-
-#pp-nav {
-  display: none !important;
-}
-
 .tp-hero-title-2 {
   font-family: var(--tp-ff-kufam);
   font-weight: 700;
@@ -18519,17 +18484,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 #card-one {
   top: 35%;
-  background-image: url(../img/portfolio/port-3-1.html);
 }
 
 #card-two {
   top: 130%;
-  background-image: url(../img/portfolio/port-3-1.html);
 }
 
 #card-three {
   top: 250%;
-  background-image: url(../img/portfolio/port-3-1.html);
 }
 
 /*----------------------------------------*/
