@@ -27,6 +27,14 @@
 
 (function ($) {
 	"use strict";
+	// Guard against missing Swiper or Slick
+	if (typeof Swiper === 'undefined') {
+		window.Swiper = function() { return { destroy: function() {}, on: function() {} }; };
+	}
+	if (typeof $.fn.slick === 'undefined') {
+		$.fn.slick = function() { return this; };
+	}
+
 
 	var windowOn = $(window);
 
@@ -70,7 +78,7 @@
 
 	////////////////////////////////////////////////////
 	// 03. Wow Js
-	new WOW().init();
+	if (typeof WOW !== "undefined") { new WOW().init(); }
 
 
 	////////////////////////////////////////////////////
@@ -322,7 +330,7 @@
 
 	////////////////////////////////////////////////////
 	// 12. Nice Select Js
-	$('select').niceSelect();
+	if ($.fn.niceSelect) { $('select').niceSelect(); }
 
 	////////////////////////////////////////////////////
 	// 13. Smooth Scroll Js
@@ -894,6 +902,7 @@
 
 	////////////////////////////////////////////////////
 	// 15. Masonary Js
+	if ($.fn.imagesLoaded && $('.grid').length > 0) {
 	$('.grid').imagesLoaded(function () {
 		// init Isotope
 		var $grid = $('.grid').isotope({
@@ -919,29 +928,34 @@
 		});
 
 	});
+	}
 
-	/* magnificPopup img view */
-	$('.popup-image').magnificPopup({
-		type: 'image',
-		gallery: {
-			enabled: true
-		}
-	});
+	if ($.fn.magnificPopup) {
+		/* magnificPopup img view */
+		$('.popup-image').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
 
-	/* magnificPopup video view */
-	$(".popup-video").magnificPopup({
-		type: "iframe",
-	});
+		/* magnificPopup video view */
+		$(".popup-video").magnificPopup({
+			type: "iframe",
+		});
+	}
 
 
 	////////////////////////////////////////////////////
 	// 17. Counter Js
-	new PureCounter();
-	new PureCounter({
-		filesizing: true,
-		selector: ".filesizecount",
-		pulse: 2,
-	});
+	if (typeof PureCounter !== "undefined") {
+		new PureCounter();
+		new PureCounter({
+			filesizing: true,
+			selector: ".filesizecount",
+			pulse: 2,
+		});
+	}
 
 	////////////////////////////////////////////////////
 	// 18. InHover Active Js
@@ -1176,7 +1190,7 @@
 		}
 	}
 
-	if ($("#tp-3d-slide-wrapper").length > 0) {
+	if (typeof Hammer !== "undefined" && $("#tp-3d-slide-wrapper").length > 0) {
 		var Slider = (function () {
 			var initSlider = function () {
 				var dir = $("html").attr("dir");
