@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PREVIEW CSS BUNDLE (Generated from assets/css/src/)
+   PRODUCTION CSS BUNDLE (Generated from assets/css/src/)
    DO NOT EDIT DIRECTLY. Source files are in assets/css/src/
    ========================================================================== */
 
@@ -524,6 +524,119 @@ textarea {
 .theme-bg-2 {
   background-color: var(--tp-dark-black-4);
 }
+
+/* ------------------------------------------------------------------------
+   Spacing Utilities (Migrated from legacy spacing.css)
+   ------------------------------------------------------------------------ */
+
+/* Margin utilities */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mb-170 {
+  margin-bottom: 170px;
+}
+
+/* Padding utilities */
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pt-110 {
+  padding-top: 110px;
+}
+
+.pt-115 {
+  padding-top: 115px;
+}
+
+.pt-120 {
+  padding-top: 120px;
+}
+
+.pt-150 {
+  padding-top: 150px;
+}
+
+.pt-195 {
+  padding-top: 195px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pb-105 {
+  padding-bottom: 105px;
+}
+
+.pb-110 {
+  padding-bottom: 110px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+.pb-125 {
+  padding-bottom: 125px;
+}
+
+.pl-70 {
+  padding-left: 70px;
+}
+
+.pr-70 {
+  padding-right: 70px;
+}
+
+/* Responsive spacing overrides */
+/* (None declared in legacy spacing.css; active spacing utilities are viewport-invariant) */
 /* <<< END 2-foundation/_utilities.css <<< */
 
 /* --------------------------------------------------------------------------

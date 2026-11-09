@@ -5,10 +5,11 @@ Resolves @import statements in assets/css/src/index.css into a single flat file.
 """
 import os
 import re
+import sys
 
 SRC_DIR = 'assets/css/src'
 INDEX_FILE = os.path.join(SRC_DIR, 'index.css')
-OUTPUT_FILE = 'assets/css/main.preview.css'
+OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else 'assets/css/main.css'
 
 def bundle():
     with open(INDEX_FILE, 'r', encoding='utf-8') as f:
@@ -32,7 +33,7 @@ def bundle():
     )
 
     header = ("/* ==========================================================================\n"
-              "   PREVIEW CSS BUNDLE (Generated from assets/css/src/)\n"
+              "   PRODUCTION CSS BUNDLE (Generated from assets/css/src/)\n"
               "   DO NOT EDIT DIRECTLY. Source files are in assets/css/src/\n"
               "   ========================================================================== */\n\n")
 
