@@ -390,6 +390,33 @@
 		})
 	}
 
+	// portfolio panel
+	let otherSections = document.querySelectorAll('.portfolio-panel');
+
+	if (otherSections.length > 0) {
+		let tl = gsap.timeline();
+
+		otherSections.forEach((section, index) => {
+			gsap.set(otherSections, {
+				scale: 1
+			});
+
+			tl.to(section, {
+				scale: .8,
+				scrollTrigger: {
+					trigger: section,
+					pin: section,
+					scrub: 1,
+					start: 'top 10%',
+					end: "bottom 60%",
+					endTrigger: '.tp-project-3__area',
+					pinSpacing: false,
+					markers: false,
+				},
+			});
+		});
+	}
+
 	if ($('.tp_title_anim').length > 0) {
 		let splitTitleLines = gsap.utils.toArray(".tp_title_anim");
 		splitTitleLines.forEach(splitTextLine => {
