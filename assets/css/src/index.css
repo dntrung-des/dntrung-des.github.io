@@ -48,3 +48,10 @@
 @import url("6-case-study/_showcase-pin.css");
 @import url("6-case-study/_case-details.css");
 @import url("6-case-study/_case-nav.css");
+
+/* --------------------------------------------------------------------------
+   7. Interactions & Animations (Shared Keyframes & Scroll Effects)
+   -------------------------------------------------------------------------- */
+@import url("7-interactions/_animations.css");
+@import url("7-interactions/_scroll-effects.css");
+

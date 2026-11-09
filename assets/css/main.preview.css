@@ -4743,6 +4743,7 @@ html[tp-theme=tp-theme-light] .tp-service-3__circle-img .shape svg {
   color: var(--tp-common-white);
   font-size: 34px;
   font-weight: 700;
+  font-family: var(--tp-ff-dmsans);
 }
 
 @media (max-width: 767px) {
@@ -4758,6 +4759,7 @@ html[tp-theme=tp-theme-light] .tp-service-3__circle-img .shape svg {
   color: rgba(255, 255, 255, 0.6);
   padding-right: 15px;
   display: inline-block;
+  font-family: var(--tp-ff-garamond);
   -webkit-transform: translateY(-7px);
   -moz-transform: translateY(-7px);
   -ms-transform: translateY(-7px);
@@ -6467,3 +6469,105 @@ html[tp-theme=tp-theme-light] .porfolio-details__navigation-bar-2 span svg .path
   color: var(--tp-common-black);
 }
 /* <<< END 6-case-study/_case-nav.css <<< */
+
+/* --------------------------------------------------------------------------
+   7. Interactions & Animations (Shared Keyframes & Scroll Effects)
+   -------------------------------------------------------------------------- */
+/* >>> BEGIN 7-interactions/_animations.css >>> */
+/* ==========================================================================
+   INTERACTIONS & SHARED ANIMATIONS
+   Actively consumed shared keyframes and interaction transitions.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Scroll Animation (Bounce effect for scroll-down triggers)
+   Active Consumers:
+   - .tp-hero-3__scrool-down span svg (Homepage Hero)
+   - .portfolio-details__scroll-down a span svg (Case Study Details)
+   -------------------------------------------------------------------------- */
+@keyframes scroll_anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes scroll_anim {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Continuous Rotation (360deg infinite spin for circular elements/badges)
+   Active Consumers:
+   - .tp-footer-3__link a img (Global Footer rotating badge)
+   - .tp-service-3__circle-img .text-img img (Homepage Services circle)
+   -------------------------------------------------------------------------- */
+@keyframes animationglob {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animationglob {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* <<< END 7-interactions/_animations.css <<< */
+/* >>> BEGIN 7-interactions/_scroll-effects.css >>> */
+/* ==========================================================================
+   SCROLL EFFECTS & SMOOTH SCROLL SUPPORT
+   Hardware acceleration and container styling for smooth scrolling.
+   ========================================================================== */
+
+#smooth-contents,
+#smooth-content {
+  will-change: transform;
+}
+
+.scroll-contents {
+  overflow: hidden;
+  cursor: default !important;
+}
+
+.scale-up .scroll-contents {
+  cursor: grabbing !important;
+}
+
+.scrollbar-tracks {
+  background: transparent !important;
+}
+/* <<< END 7-interactions/_scroll-effects.css <<< */
+

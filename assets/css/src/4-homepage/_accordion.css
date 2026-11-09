@@ -277,6 +277,7 @@
   color: var(--tp-common-white);
   font-size: 34px;
   font-weight: 700;
+  font-family: var(--tp-ff-dmsans);
 }
 
 @media (max-width: 767px) {
@@ -292,6 +293,7 @@
   color: rgba(255, 255, 255, 0.6);
   padding-right: 15px;
   display: inline-block;
+  font-family: var(--tp-ff-garamond);
   -webkit-transform: translateY(-7px);
   -moz-transform: translateY(-7px);
   -ms-transform: translateY(-7px);
