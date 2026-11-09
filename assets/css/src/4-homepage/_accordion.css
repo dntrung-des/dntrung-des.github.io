@@ -1,0 +1,398 @@
+/* ==========================================================================
+   4-homepage/_accordion.css
+   Base Accordion & Services Interactive FAQ / Service Detail Accordion
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Base Accordion Controls & States
+   -------------------------------------------------------------------------- */
+/*  2.12 Accordion
+/*----------------------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-accordion {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tp-accordion {
+    padding-left: 20px;
+  }
+}
+
+.tp-accordion .accordion-item {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(var(--tp-common-black), 1);
+}
+
+.tp-accordion .accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.tp-accordion .accordion-item:last-of-type {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.tp-accordion .accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.tp-accordion .accordion-button {
+  padding: 30px 0;
+  padding-right: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--tp-common-black);
+  background-color: transparent;
+  /* plus icon css */
+}
+
+.tp-accordion .accordion-button::after {
+  position: absolute;
+  content: "\f106";
+  font-family: var(--tp-ff-fontawesome);
+  background-image: none;
+  top: 28%;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: var(--tp-theme-primary);
+  width: auto;
+  height: auto;
+  font-weight: 500;
+  background: none;
+}
+
+.tp-accordion .accordion-button.has-plus-icon::after {
+  display: none;
+}
+
+.tp-accordion .accordion-button .tp-accordion-plus {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+[dir=rtl] .tp-accordion .accordion-button .tp-accordion-plus {
+  right: auto;
+  left: 0;
+}
+
+.tp-accordion .accordion-button .tp-accordion-plus::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #525258;
+  border-radius: 2px;
+}
+
+[dir=rtl] .tp-accordion .accordion-button .tp-accordion-plus::after {
+  right: 0;
+  left: auto;
+}
+
+.tp-accordion .accordion-button .tp-accordion-plus::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  background-color: #525258;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+[dir=rtl] .tp-accordion .accordion-button .tp-accordion-plus::before {
+  right: 50%;
+  left: auto;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.tp-accordion .accordion-button.collapsed::after {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: var(--tp-common-black);
+}
+
+.tp-accordion .accordion-button:not(.collapsed) {
+  color: var(--tp-theme-primary);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.tp-accordion .accordion-button:not(.collapsed) .tp-accordion-plus::before {
+  -webkit-transform: translateX(-50%) rotate(90deg);
+  -moz-transform: translateX(-50%) rotate(90deg);
+  -ms-transform: translateX(-50%) rotate(90deg);
+  -o-transform: translateX(-50%) rotate(90deg);
+  transform: translateX(-50%) rotate(90deg);
+  background-color: var(--tp-theme-1);
+}
+
+[dir=rtl] .tp-accordion .accordion-button:not(.collapsed) .tp-accordion-plus::before {
+  -webkit-transform: translateX(50%) rotate(90deg);
+  -moz-transform: translateX(50%) rotate(90deg);
+  -ms-transform: translateX(50%) rotate(90deg);
+  -o-transform: translateX(50%) rotate(90deg);
+  transform: translateX(50%) rotate(90deg);
+}
+
+.tp-accordion .accordion-button:not(.collapsed) .tp-accordion-plus::after {
+  background-color: var(--tp-theme-1);
+}
+
+.tp-accordion .accordion-button:focus {
+  box-shadow: none;
+  border: 0;
+}
+
+.tp-accordion .accordion-button:hover {
+  color: var(--tp-theme-primary);
+}
+
+.tp-accordion .accordion-button:hover::after {
+  color: var(--tp-theme-primary);
+}
+
+.tp-accordion .accordion-body {
+  padding: 0 0 25px;
+}
+
+.tp-accordion .accordion-body p {
+  font-size: 16px;
+  color: var(--tp-text-1);
+}
+
+.tp-accordion-2 .accordion-button::after {
+  display: none;
+}
+
+/*----------------------------------------*/
+
+/* --------------------------------------------------------------------------
+   2. Services Accordion Customized Layout & Expand States
+   -------------------------------------------------------------------------- */
+.tp-services-accordion-border {
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .tp-services-accordion-border {
+    display: none;
+  }
+}
+
+.tp-services-accordion .accordion-item {
+  position: relative;
+}
+
+.tp-services-accordion .accordion-item.active::after {
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.tp-services-accordion .accordion-item::after {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 2px;
+  height: 0%;
+  content: "";
+  background-color: var(--tp-common-white);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-services-accordion .accordion-item::after {
+    left: -60.5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .tp-services-accordion .accordion-item::after {
+    display: none;
+  }
+}
+
+.tp-services-accordion .accordion-item-border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tp-services-accordion .accordion-item:first-child .accordion-button {
+  padding-top: 0;
+}
+
+.tp-services-accordion .accordion-button {
+  padding: 28px 0 20px;
+  color: var(--tp-common-white);
+  font-size: 34px;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .tp-services-accordion .accordion-button {
+    font-size: 25px;
+  }
+}
+
+.tp-services-accordion .accordion-button span {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-right: 15px;
+  display: inline-block;
+  -webkit-transform: translateY(-7px);
+  -moz-transform: translateY(-7px);
+  -ms-transform: translateY(-7px);
+  -o-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+
+.tp-services-accordion .accordion-button:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tp-services-accordion .accordion-button:not(.collapsed) {
+  color: var(--tp-common-white);
+}
+
+.tp-services-accordion .accordion-button.collapsed {
+  color: var(--tp-common-white);
+}
+
+.tp-services-accordion .accordion-body {
+  padding-left: 32px;
+  padding-right: 95px;
+  padding-bottom: 33px;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .tp-services-accordion .accordion-body {
+    padding-right: 70px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-services-accordion .accordion-body {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tp-services-accordion .accordion-body {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+.tp-services-accordion .accordion-body p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tp-services-accordion .accordion-body ul li {
+  list-style: none;
+  font-size: 16px;
+  color: var(--tp-common-white);
+  position: relative;
+  padding-left: 15px;
+}
+
+.tp-services-accordion .accordion-body ul li:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.tp-services-accordion .accordion-body ul li::after {
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--tp-common-white);
+  border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------
+   3. Accordion Light Theme Overrides
+   -------------------------------------------------------------------------- */
+html[tp-theme=tp-theme-light] .tp-services-accordion .accordion-button:not(.collapsed) {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-services-accordion .accordion-button.collapsed {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-services-accordion .accordion-body p {
+  color: #6F7074;
+}
+
+html[tp-theme=tp-theme-light] .tp-services-accordion .accordion-body ul li {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-services-accordion .accordion-body ul li::after {
+  background-color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-services-accordion-border {
+  background-color: rgba(18, 18, 18, 0.08);
+}
+
+html[tp-theme=tp-theme-light] .tp-services-accordion .accordion-item::after {
+  background-color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-accordion .accordion-item {
+  border-bottom: 1px solid rgba(37, 37, 37, 0.08);
+}

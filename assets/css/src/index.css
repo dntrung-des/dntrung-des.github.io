@@ -27,3 +27,13 @@
 @import url("3-global/_forms.css");
 @import url("3-global/_section-title.css");
 
+/* --------------------------------------------------------------------------
+   4. Homepage Components (Hero, Services, Accordion, About, Skills)
+   -------------------------------------------------------------------------- */
+@import url("4-homepage/_hero.css");
+@import url("4-homepage/_services.css");
+@import url("4-homepage/_accordion.css");
+@import url("4-homepage/_about.css");
+@import url("4-homepage/_skills.css");
+
+
