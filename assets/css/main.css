@@ -4541,46 +4541,6 @@ div.tp-theme-toggle-single .themepure-theme-toggle-input {
   display: block;
 }
 
-/*----------------------------------------*/
-/*  2.9 Pagination
-/*----------------------------------------*/
-.tp-pagination ul {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.tp-pagination ul li {
-  display: inline-block;
-}
-
-.tp-pagination ul li:not(:last-child) {
-  margin-right: 6px;
-}
-
-.tp-pagination ul li a,
-.tp-pagination ul li span {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 38px;
-  text-align: center;
-  border: 1px solid rgba(2, 11, 24, 0.1);
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--tp-text-body);
-}
-
-.tp-pagination ul li a:hover,
-.tp-pagination ul li a.current,
-.tp-pagination ul li span:hover,
-.tp-pagination ul li span.current {
-  background: var(--tp-theme-primary);
-  border-color: var(--tp-theme-primary);
-  color: var(--tp-common-white);
-}
 
 /*----------------------------------------*/
 /*  2.10 Offcanvas
@@ -5311,128 +5271,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   color: rgba(255, 255, 255, 0.2);
 }
 
-/*----------------------------------------*/
-/*  2.11 Breadcrumb
-/*----------------------------------------*/
-.breadcrumb__title {
-  font-weight: 500;
-  font-size: 44px;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.breadcrumb__title-pre {
-  display: inline-block;
-  height: 24px;
-  line-height: 26px;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 500;
-  background: var(--tp-theme-primary);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding: 0 7px;
-  margin-bottom: 12px;
-}
-
-.breadcrumb__list span {
-  font-weight: 400;
-  font-size: 16px;
-  position: relative;
-}
-
-.breadcrumb__list span:not(:last-child) {
-  padding-right: 12px;
-  margin-right: 5px;
-}
-
-.breadcrumb__list span:not(:last-child)::after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 50%;
-  width: 4px;
-  height: 4px;
-  background-color: #A8ACB0;
-  border-radius: 50%;
-}
-
-.breadcrumb__list span a:hover {
-  color: var(--tp-theme-primary);
-}
-
-.breadcrumb__overlay {
-  position: relative;
-}
-
-.breadcrumb__overlay::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(2, 11, 24, 0.5);
-}
-
-.breadcrumb__style-2 .breadcrumb__list span:last-child {
-  color: var(--tp-common-black);
-}
-
-.breadcrumb__style-2 .breadcrumb__list span.breadcrumb-icon {
-  padding-right: 0;
-  margin-right: 0;
-}
-
-.breadcrumb__style-2 .breadcrumb__list span.breadcrumb-icon svg {
-  -webkit-transform: translateY(-3px);
-  -moz-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  -o-transform: translateY(-3px);
-  transform: translateY(-3px);
-}
-
-.breadcrumb__style-2 .breadcrumb__list.has-icon span:nth-child(1)::after {
-  display: none;
-}
-
-.breadcrumb__style-3 .breadcrumb__title {
-  color: var(--tp-common-white);
-}
-
-.breadcrumb__style-3 .breadcrumb__list span {
-  color: var(--tp-common-white);
-}
-
-.breadcrumb__style-3 .breadcrumb__list span:last-child {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.breadcrumb__style-3 .breadcrumb__list span:not(:last-child)::after {
-  background-color: var(--tp-common-white);
-}
-
-.breadcrumb__style-3 .breadcrumb__list span.breadcrumb-icon {
-  padding-right: 0;
-  margin-right: 0;
-}
-
-.breadcrumb__style-3 .breadcrumb__list span.breadcrumb-icon svg {
-  -webkit-transform: translateY(-3px);
-  -moz-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  -o-transform: translateY(-3px);
-  transform: translateY(-3px);
-}
-
-.breadcrumb__style-3 .breadcrumb__list span a:hover {
-  color: var(--tp-common-white);
-}
-
-.breadcrumb__style-3 .breadcrumb__list.has-icon span:nth-child(1)::after {
-  display: none;
-}
 
 /*----------------------------------------*/
 /*  2.12 Accordion
@@ -5793,9 +5631,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   background-color: var(--tp-common-black);
 }
 
-/*----------------------------------------*/
-/*  2.14 Modal
-/*----------------------------------------*/
 /*----------------------------------------*/
 /*  2.15 Section Title
 /*----------------------------------------*/
