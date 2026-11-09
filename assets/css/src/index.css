@@ -36,4 +36,11 @@
 @import url("4-homepage/_about.css");
 @import url("4-homepage/_skills.css");
 
+/* --------------------------------------------------------------------------
+   5. Portfolio Components (Tabs, Filter Controls, Project Grid, Cards)
+   -------------------------------------------------------------------------- */
+@import url("5-portfolio/_portfolio-tabs.css");
+@import url("5-portfolio/_portfolio-grid.css");
+
+
 

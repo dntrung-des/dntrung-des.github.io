@@ -5239,4 +5239,742 @@ html[tp-theme=tp-theme-light] .tp-skill-title {
 }
 /* <<< END 4-homepage/_skills.css <<< */
 
+/* --------------------------------------------------------------------------
+   5. Portfolio Components (Tabs, Filter Controls, Project Grid, Cards)
+   -------------------------------------------------------------------------- */
+/* >>> BEGIN 5-portfolio/_portfolio-tabs.css >>> */
+/* ==========================================================================
+   5-portfolio/_portfolio-tabs.css
+   Portfolio Archive Category Tabs, Filter Buttons & Header Layout
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Header, Subtitle, Title & Category Filter Tabs
+   -------------------------------------------------------------------------- */
+.blog-list__ptb {
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .blog-list__ptb {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-list__ptb {
+    padding-top: 120px;
+  }
+}
+
+.blog-list__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--tp-common-white);
+  font-family: var(--tp-ff-didoneright);
+}
+
+.blog-list__text-sm span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 767px) {
+  .blog-list__text-sm span {
+    font-size: 11px;
+  }
+}
+
+.blog-list__text-sm span.category {
+  height: 26px;
+  line-height: 25px;
+  padding: 0px 18px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--tp-common-white);
+}
+
+@media (max-width: 767px) {
+  .blog-list__text-sm span.category {
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 10px;
+    font-size: 10px;
+  }
+}
+
+.blog-list__text-sm i {
+  font-size: 16px;
+  color: var(--tp-common-white);
+  margin: 0 12px;
+}
+
+@media (max-width: 767px) {
+  .blog-list__text-sm i {
+    font-size: 11px;
+    margin: 0 7px;
+  }
+}
+
+.blog-list__title {
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--tp-common-white);
+  font-family: var(--tp-ff-didoneright);
+  margin-bottom: 90px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blog-list__title {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .blog-list__title {
+    font-size: 75px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-list__title {
+    font-size: 42px;
+    margin-bottom: 60px;
+  }
+}
+
+.blog-list__tab-btn {
+  margin-bottom: 65px;
+}
+
+.blog-list__tab-btn ul li button {
+  background-color: #272F52;
+  border-radius: 25px;
+  color: var(--tp-common-white);
+  font-family: var(--tp-ff-dmsans);
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 30px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-right: 12px;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blog-list__tab-btn ul li button {
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .blog-list__tab-btn ul li button {
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-list__tab-btn ul li button {
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 17px;
+    font-size: 14px;
+  }
+}
+
+.blog-list__tab-btn ul li button span {
+  margin-right: 14px;
+}
+
+.blog-list__tab-btn ul li button:hover {
+  background-color: var(--tp-common-white);
+  color: var(--tp-common-black);
+}
+
+.blog-list__tab-btn ul li button.active {
+  background-color: var(--tp-common-white);
+  color: var(--tp-common-black);
+}
+
+/* --------------------------------------------------------------------------
+   2. Portfolio Tabs Light Theme Overrides
+   -------------------------------------------------------------------------- */
+html[tp-theme=tp-theme-light] .blog-list__area {
+  background-color: #F6F9FF;
+}
+
+html[tp-theme=tp-theme-light] .blog-list__title {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .blog-list__subtitle {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .blog-list__tab-btn ul li button {
+  background-color: #E9EEF6;
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .blog-list__tab-btn ul li button:hover {
+  background-color: var(--tp-common-black-5);
+  color: var(--tp-common-white);
+}
+
+html[tp-theme=tp-theme-light] .blog-list__tab-btn ul li button.active {
+  background-color: var(--tp-common-black-5);
+  color: var(--tp-common-white);
+}
+
+html[tp-theme=tp-theme-light] .blog-list__text-sm span.category {
+  border: 1px solid rgba(17, 17, 20, 0.1);
+  color: var(--tp-common-black-5);
+}
+/* <<< END 5-portfolio/_portfolio-tabs.css <<< */
+/* >>> BEGIN 5-portfolio/_portfolio-grid.css >>> */
+/* ==========================================================================
+   5-portfolio/_portfolio-grid.css
+   Portfolio Project Grid, Thumbnails, Hover Meta & Shared Project Showcase
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Portfolio Typography & Transitions
+   -------------------------------------------------------------------------- */
+.tp-portfolio-meta-arrow::before,
+.tp-portfolio-meta-arrow svg,
+.tp-portfolio-meta-2 span,
+.tp-portfolio-title,
+.tp-portfolio-item-2 .tp-portfolio-view span,
+.tp-portfolio-title-2,
+.tp-portfolio-view-btn-3 span {
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+
+.tp-portfolio-title,
+.tp-portfolio-item-2 .tp-portfolio-view span,
+.tp-portfolio-meta-2 span,
+.tp-portfolio-title-2,
+.tp-portfolio-view-btn-3 span {
+  font-family: var(--tp-ff-dmsans);
+}
+
+.tp-portfolio-thumb-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   2. Small Category Badge (Cards)
+   -------------------------------------------------------------------------- */
+.blog-list__sm-category {
+  margin-bottom: 17px;
+}
+
+.blog-list__sm-category span {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--tp-common-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0 15px;
+  height: 26px;
+  line-height: 25px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Portfolio Cards, Grid Layout, Hover Overlays & Section 3 Showcase
+   -------------------------------------------------------------------------- */
+.tp-portfolio-wrapper {
+  padding-right: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-portfolio-area {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-area {
+    padding-top: 100px;
+  }
+}
+
+.tp-portfolio-item:hover .tp-portfolio-thumb {
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.tp-portfolio-item:hover .tp-portfolio-thumb-img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.tp-portfolio-item:hover .tp-portfolio-meta-hover span:not(.tp-portfolio-meta-link) {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.tp-portfolio-item:hover .tp-portfolio-meta-hover .tp-portfolio-meta-link {
+  transform: translateX(1px);
+  opacity: 1;
+}
+
+.tp-portfolio-item:hover .tp-portfolio-meta-hover span {
+  color: var(--tp-common-white);
+}
+
+.tp-portfolio-item:hover .tp-portfolio-meta-arrow {
+  width: 43px;
+}
+
+.tp-portfolio-item:hover .tp-portfolio-meta-arrow::before {
+  visibility: hidden;
+  opacity: 0;
+  width: 40px;
+  color: var(--tp-common-white);
+}
+
+.tp-portfolio-item:hover .tp-portfolio-meta-arrow svg {
+  visibility: visible;
+  opacity: 1;
+  color: var(--tp-common-white);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .tp-portfolio-item-wrapper {
+    padding-left: 0;
+  }
+}
+
+.tp-portfolio-title {
+  font-size: 30px;
+  color: var(--tp-common-white);
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.tp-portfolio-meta-count {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  margin-right: 9px;
+}
+
+.tp-portfolio-meta-arrow {
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  background-color: transparent;
+  margin-right: 9px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.tp-portfolio-meta-arrow::before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  height: 1px;
+  width: 20px;
+  left: 0;
+}
+
+.tp-portfolio-meta-arrow svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tp-portfolio-meta-hover {
+  position: relative;
+}
+
+.tp-portfolio-meta-hover span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  padding-right: 27px;
+  margin-right: 6px;
+  -webkit-transition: transform 400ms, opacity 200ms, color 400ms;
+  -moz-transition: transform 400ms, opacity 200ms, color 400ms;
+  -ms-transition: transform 400ms, opacity 200ms, color 400ms;
+  -o-transition: transform 400ms, opacity 200ms, color 400ms;
+  transition: transform 400ms, opacity 200ms, color 400ms;
+}
+
+.tp-portfolio-meta-hover span.tp-portfolio-meta-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.tp-portfolio-thumb {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 560px;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-thumb {
+    height: 460px;
+  }
+}
+
+.tp-portfolio-thumb.img-1 {
+  height: 560px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-thumb.img-1 {
+    height: 460px;
+  }
+}
+
+.tp-portfolio-thumb.img-2 {
+  height: 520px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-thumb.img-2 {
+    height: 460px;
+  }
+}
+
+.tp-portfolio-thumb.img-3 {
+  height: 500px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-thumb.img-3 {
+    height: 460px;
+  }
+}
+
+.tp-portfolio-thumb.img-4 {
+  height: 420px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-thumb.img-4 {
+    height: 400px;
+  }
+}
+
+.tp-portfolio-thumb a {
+  display: block;
+}
+
+.tp-portfolio-thumb-img {
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.tp-portfolio-thumb-img img {
+  border-radius: 12px;
+}
+
+.tp-portfolio-more {
+  margin-left: 270px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-portfolio-more {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-more {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+}
+
+.tp-portfolio-top-text {
+  position: absolute;
+  top: 6%;
+  right: -14%;
+}
+
+.tp-portfolio-top-text p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 250px;
+  line-height: 0.8;
+  opacity: 0.02;
+  margin-bottom: 0;
+  flex: 0 0 auto;
+  margin-right: 65px;
+  color: var(--tp-common-white);
+}
+
+.tp-portfolio-item-2 {
+  padding: 40px 40px;
+  width: 770px;
+  height: 520px;
+  border-radius: 14px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-portfolio-item-2 {
+    width: 630px;
+    height: 470px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-portfolio-item-2 {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tp-portfolio-item-2 {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+  }
+}
+
+.tp-portfolio-item-2 .tp-portfolio-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  margin: -40px 0 0 -40px;
+}
+
+.tp-portfolio-item-2 .tp-portfolio-view span {
+  color: #171718;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  background: #F1F1F1;
+  backdrop-filter: blur(20px);
+  display: inline-block;
+  padding-top: 29px;
+}
+
+.tp-hover-reveal-text.active:hover .tp-portfolio-view {
+  opacity: 1;
+}
+
+.tp-portfolio-meta-2 {
+  margin-bottom: 11px;
+}
+
+.tp-portfolio-meta-2 span {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 30px;
+  border: 1.5px solid rgba(255, 255, 255, 0.24);
+  padding: 6px 19px;
+}
+
+.tp-portfolio-meta-2 span:not(:last-child) {
+  margin-right: 2px;
+}
+
+.tp-portfolio-meta-2 span:hover {
+  background-color: var(--tp-common-white);
+  border-color: var(--tp-common-white);
+  color: var(--tp-common-black);
+}
+
+.tp-portfolio-title-2 {
+  color: #FFF;
+  font-size: 30px;
+  letter-spacing: -0.3px;
+  font-weight: 600;
+}
+
+.tp-portfolio-view {
+  -webkit-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  -ms-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tp-portfolio-shape-2-1 {
+  position: absolute;
+  top: 18%;
+  right: 11%;
+  z-index: -1;
+}
+
+.tp-portfolio-item-3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.tp-portfolio-item-3:hover .tp-portfolio-view-btn-3 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tp-portfolio-view-btn-3 {
+  -webkit-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  -ms-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  margin: -40px 0 0 -40px;
+}
+
+.tp-portfolio-view-btn-3 span {
+  color: var(--tp-common-white);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  background: #0F183E;
+  backdrop-filter: blur(20px);
+  display: inline-block;
+  padding-top: 29px;
+}
+
+.tp-portfolio-item-3 img {
+  border-radius: 30px;
+}
+
+.tp-project-3__item img {
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. Portfolio Grid Light Theme Overrides
+   -------------------------------------------------------------------------- */
+html[tp-theme=tp-theme-light] .tp-portfolio-title {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-portfolio-meta-count {
+  color: rgba(37, 37, 37, 0.7);
+}
+
+html[tp-theme=tp-theme-light] .tp-portfolio-meta-arrow::before {
+  background: rgba(37, 37, 37, 0.7);
+}
+
+html[tp-theme=tp-theme-light] .tp-portfolio-meta-hover span {
+  color: rgba(37, 37, 37, 0.7);
+}
+
+html[tp-theme=tp-theme-light] .tp-portfolio-item:hover .tp-portfolio-meta-arrow svg {
+  color: rgba(37, 37, 37, 0.7);
+}
+
+html[tp-theme=tp-theme-light] .tp-portfolio-item:hover .tp-portfolio-meta-hover span {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-project-3__area {
+  background-color: #F6F9FF;
+}
+
+html[tp-theme=tp-theme-light] .tp-project-3__area .tp-section-title-3 {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .blog-list__sm-category span {
+  color: var(--tp-common-black-5);
+  border: 1px solid rgba(2, 11, 24, 0.1);
+}
+/* <<< END 5-portfolio/_portfolio-grid.css <<< */
+
+
 
