@@ -1,0 +1,71 @@
+/* ==========================================================================
+   1-tokens/_variables.css
+   Confirmed Active CSS Custom Properties (:root)
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Typography Tokens
+     ------------------------------------------------------------------------ */
+  --tp-ff-body: 'DM Sans', sans-serif;
+  --tp-ff-heading: 'Didone', sans-serif;
+  --tp-ff-p: 'DM Sans', sans-serif;
+  --tp-ff-dmsans: 'DM Sans', sans-serif;
+  --tp-ff-didone: 'Didone', sans-serif;
+  --tp-ff-didoneright: 'Didone right', serif;
+  --tp-ff-garamond: 'EB Garamond', serif;
+  --tp-ff-kufam: 'Kufam', sans-serif;
+  --tp-ff-abril: 'Abril Fatface', cursive;
+  --tp-ff-poppins: 'Poppins', sans-serif;
+  --tp-ff-playfair: 'Playfair Display', sans-serif;
+  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+
+  /* ------------------------------------------------------------------------
+     Color Tokens — Common Monochrome Palette
+     ------------------------------------------------------------------------ */
+  --tp-common-white: #ffffff;
+  --tp-common-white-2: #E4E6DC;
+  --tp-common-white-3: #F0F0F6;
+  --tp-common-black: #020B18;
+  --tp-common-black-5: #171718;
+  --tp-common-black-5-active: #5a3bff;
+  --tp-common-black-6: #192553;
+  --tp-common-black-7: #121314;
+  --tp-common-black-8: #2E2E2E;
+
+  /* ------------------------------------------------------------------------
+     Color Tokens — Dark Background Surfaces
+     ------------------------------------------------------------------------ */
+  --tp-dark-black: #020B18;
+  --tp-dark-black-2: #000F4A;
+  --tp-dark-black-3: #162251;
+  --tp-dark-black-4: #0F183E;
+  --tp-dark-black-5: #213617;
+
+  /* ------------------------------------------------------------------------
+     Color Tokens — Brand & Accents
+     ------------------------------------------------------------------------ */
+  --tp-theme-primary: #4C40F7;
+  --tp-theme-secondary: #1A2813;
+  --tp-blue-2: #4C40F7;
+  --tp-pink-2: #FF5746;
+  --tp-cream-1: #B7AB98;
+  --tp-cream-2: #CFC292;
+  --tp-green-2: #BCE70C;
+  --tp-coffe-1: #653624;
+  --tp-coffe-2: #552411;
+
+  /* ------------------------------------------------------------------------
+     Color Tokens — Text & Headings
+     ------------------------------------------------------------------------ */
+  --tp-headingDark-primary: #020B18;
+  --tp-text-body: #55585B;
+  --tp-text-1: #767A7D;
+
+  /* ------------------------------------------------------------------------
+     Color Tokens — Greys & Surfaces
+     ------------------------------------------------------------------------ */
+  --tp-grey-1: #F6F7F9;
+  --tp-grey-3: #F6F9FF;
+  --tp-footer-grey-1: #F4F7F9;
+}

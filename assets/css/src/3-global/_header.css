@@ -1,0 +1,248 @@
+/* ==========================================================================
+   3-global/_header.css
+   Dynamic Floating Header (Navigation pill, logo states, responsive, light theme)
+   ========================================================================== */
+
+/* ======= Header chính ======= */
+   .header-dynamic {
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 74vw;
+    max-width: 1200px;
+    height: 62px;
+    padding: 6px 15px;
+    background-color: var(--tp-dark-black-4);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    position: fixed;
+    top: 0.75rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    pointer-events: auto;
+    will-change: auto;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
+ }
+
+ .header-dynamic:hover {
+    transition: none;
+ }
+
+ /* Tạo viền gradient */
+ .header-dynamic::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    /* background: linear-gradient(to right, #7A87FB, #ffa632); */
+    background: #5a3bff;
+    -webkit-mask:
+       linear-gradient(white 0 0) content-box,
+       linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+ }
+
+ /* ======= Logo ======= */
+ .header-logo {
+    align-items: center;
+ }
+
+ .header-logo .logo_img {
+    display: block;
+    height: 38px;
+    width: auto;
+    order: 1;
+    transition: opacity 0.3s ease-in-out;
+ }
+
+ .header-logo .logo_img_sm {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+ }
+
+ .header-spacer {
+    flex-grow: 1;
+ }
+
+ /* ======= Menu ======= */
+ .header-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    list-style: none;
+    white-space: nowrap;
+    order: 2;
+ }
+
+ .header-items .header-item {
+    margin: 0 4px;
+ }
+
+.header-items .header-item-right {
+  padding: 0 4px;
+  margin-left: 10rem;
+}
+
+.header-cv-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  position: relative;
+}
+
+.header-cv-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(45deg, #4506d8, #bb33ed);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.header-cv-btn svg { 
+  background-color: linear-gradient(45deg, #4506d8, #bb33ed); 
+}
+
+.header-cv-btn:hover {
+  color: #ffffff;
+  /* background-color: #ffffff; */
+  /* background-color: linear-gradient(45deg, #4506d8, #bb33ed); */
+  background-image: linear-gradient(45deg, #4506d8, #bb33ed);
+  transform: rotate(-120deg);
+}
+
+ .nav-link-custom {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    color: #5a3bff;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 700;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .nav-link-custom:hover {
+    background: white;
+    color: rgba(95, 69, 242, 1);
+ }
+
+ .nav-link-custom.active {
+    background: rgba(95, 69, 242, 1);
+    color: white;
+ }
+
+ /* ======= Ngôn ngữ ======= */
+ .header-langs {
+    background: rgb(251, 239, 225);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+ }
+
+ .langs-items {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+ }
+
+ .langs-item {
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(95, 69, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .langs-items .active {
+    background: rgb(95, 69, 242);
+    color: white;
+ }
+
+ /* ======= Dạng thu nhỏ ======= */
+ .header-dynamic.header-small {
+    width: 200px;
+    height: 55px;
+    padding: 0;
+    background: #5a3bff;
+    transition: all 0.3s ease-in-out;
+ }
+
+ .header-small .logo_img {
+    display: none;
+ }
+
+.header-small .logo_img_sm {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    height: 50px;
+    margin-left: 3px;
+}
+
+ .header-small .header-items .header-item {
+    display: none;
+ }
+
+ .header-small .header-items .header-item:first-child {
+    display: block;
+ }
+
+ .header-small .header-items .header-item:first-child .nav-link-custom {
+    background: none;
+    color: white;
+ }
+
+ .header-dynamic:hover .logo_img {
+    display: block;
+ }
+
+ .header-dynamic:hover .logo_img_sm {
+    display: none;
+ }
+
+/* --------------------------------------------------------------------------
+   Header Light Theme Overrides
+   -------------------------------------------------------------------------- */
+
+html[tp-theme=tp-theme-light] .header-dynamic {
+  background-color: #F6F9FF;
+}
+
+html[tp-theme=tp-theme-light] .header-small .header-items .header-item:first-child .nav-link-custom {
+  color: var(--tp-common-black-5-active);
+}

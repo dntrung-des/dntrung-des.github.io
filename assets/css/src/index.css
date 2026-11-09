@@ -1,0 +1,29 @@
+/* ==========================================================================
+   PORTFOLIO DESIGN SYSTEM & MODULAR CSS ENTRY POINT
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tokens (Fonts, Custom Properties, Design Tokens)
+   -------------------------------------------------------------------------- */
+@import url("1-tokens/_fonts.css");
+@import url("1-tokens/_variables.css");
+
+/* --------------------------------------------------------------------------
+   2. Foundation (Resets, Typography Base, Global Utilities)
+   -------------------------------------------------------------------------- */
+@import url("2-foundation/_reset.css");
+@import url("2-foundation/_base.css");
+@import url("2-foundation/_utilities.css");
+
+/* --------------------------------------------------------------------------
+   3. Global Components (Header, Footer, Controls, Base UI Elements)
+   -------------------------------------------------------------------------- */
+@import url("3-global/_header.css");
+@import url("3-global/_footer.css");
+@import url("3-global/_theme-toggle.css");
+@import url("3-global/_buttons.css");
+@import url("3-global/_preloader.css");
+@import url("3-global/_cursor.css");
+@import url("3-global/_forms.css");
+@import url("3-global/_section-title.css");
+
