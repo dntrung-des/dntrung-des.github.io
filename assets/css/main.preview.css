@@ -2865,6 +2865,19 @@ html[tp-theme=tp-theme-light] .tp-contact-2__select .nice-select span.current {
   color: var(--tp-common-black-5);
 }
 
+html[tp-theme=tp-theme-light] .nice-select .list {
+  background-color: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(23, 23, 24, 0.1);
+}
+
+html[tp-theme=tp-theme-light] .nice-select .option {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .nice-select::after {
+  color: var(--tp-common-black);
+}
+
 html[tp-theme=tp-theme-light] .tp-contact-2__select::before {
   background-color: #DFDFDF;
 }
@@ -6570,4 +6583,57 @@ html[tp-theme=tp-theme-light] .porfolio-details__navigation-bar-2 span svg .path
   background: transparent !important;
 }
 /* <<< END 7-interactions/_scroll-effects.css <<< */
+
+/* --------------------------------------------------------------------------
+   8. Themes (Baseline Theme Rules & Global Light Theme Overrides)
+   -------------------------------------------------------------------------- */
+/* >>> BEGIN 8-themes/_theme-base.css >>> */
+/* ==========================================================================
+   8-themes/_theme-base.css
+   Global Default / Dark Theme Infrastructure & Baseline State Rules
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Default / Dark Theme Explicit Overrides
+   (Declared in main.css Section 7.15 lines 9535-9548)
+   -------------------------------------------------------------------------- */
+
+html[tp-theme=tp-theme-dark] .tp-about-fact-item h4 {
+  color: var(--tp-common-white);
+}
+
+html[tp-theme=tp-theme-dark] .tp-section-subtitle {
+  background-image: -webkit-linear-gradient(91deg, #5a3aff 5.09%, #ac13f8 98.42%);
+  background-image: -moz-linear-gradient(91deg, #5a3aff 5.09%, #ac13f8 98.42%);
+  background-image: -ms-linear-gradient(91deg, #5a3aff 5.09%, #ac13f8 98.42%);
+  background-image: -o-linear-gradient(91deg, #5a3aff 5.09%, #ac13f8 98.42%);
+  background-image: linear-gradient(91deg, #5a3aff 5.09%, #ac13f8 98.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+/* <<< END 8-themes/_theme-base.css <<< */
+/* >>> BEGIN 8-themes/_theme-light.css >>> */
+/* ==========================================================================
+   8-themes/_theme-light.css
+   Global Light Theme Surface, Root Variables & Cross-Component Overrides
+   (Active state when html[tp-theme="tp-theme-light"])
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Global Light Theme Root Surface & Smooth Wrapper Baseline
+   -------------------------------------------------------------------------- */
+html[tp-theme="tp-theme-light"] body,
+html[tp-theme="tp-theme-light"] #smooth-wrapper {
+  background-color: #F6F9FF;
+}
+
+/* --------------------------------------------------------------------------
+   Global Cursor Light Mode Inversion
+   -------------------------------------------------------------------------- */
+html[tp-theme="tp-theme-light"] #awesome-cursor-circle {
+  background-color: var(--tp-common-black-5);
+}
+/* <<< END 8-themes/_theme-light.css <<< */
+
 

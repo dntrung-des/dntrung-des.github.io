@@ -1,0 +1,20 @@
+/* ==========================================================================
+   8-themes/_theme-light.css
+   Global Light Theme Surface, Root Variables & Cross-Component Overrides
+   (Active state when html[tp-theme="tp-theme-light"])
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Global Light Theme Root Surface & Smooth Wrapper Baseline
+   -------------------------------------------------------------------------- */
+html[tp-theme="tp-theme-light"] body,
+html[tp-theme="tp-theme-light"] #smooth-wrapper {
+  background-color: #F6F9FF;
+}
+
+/* --------------------------------------------------------------------------
+   Global Cursor Light Mode Inversion
+   -------------------------------------------------------------------------- */
+html[tp-theme="tp-theme-light"] #awesome-cursor-circle {
+  background-color: var(--tp-common-black-5);
+}

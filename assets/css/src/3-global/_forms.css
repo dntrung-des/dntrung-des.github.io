@@ -579,6 +579,19 @@ html[tp-theme=tp-theme-light] .tp-contact-2__select .nice-select span.current {
   color: var(--tp-common-black-5);
 }
 
+html[tp-theme=tp-theme-light] .nice-select .list {
+  background-color: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(23, 23, 24, 0.1);
+}
+
+html[tp-theme=tp-theme-light] .nice-select .option {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .nice-select::after {
+  color: var(--tp-common-black);
+}
+
 html[tp-theme=tp-theme-light] .tp-contact-2__select::before {
   background-color: #DFDFDF;
 }

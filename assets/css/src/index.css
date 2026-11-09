@@ -55,3 +55,10 @@
 @import url("7-interactions/_animations.css");
 @import url("7-interactions/_scroll-effects.css");
 
+/* --------------------------------------------------------------------------
+   8. Themes (Baseline Theme Rules & Global Light Theme Overrides)
+   -------------------------------------------------------------------------- */
+@import url("8-themes/_theme-base.css");
+@import url("8-themes/_theme-light.css");
+
+
