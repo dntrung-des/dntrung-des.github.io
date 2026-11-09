@@ -16,7 +16,7 @@
    Google Fonts @import and Local Web Fonts (@font-face)
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&family=Kufam:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 
 @font-face {
   font-family: "Didone";
@@ -67,9 +67,7 @@
   --tp-ff-didone: 'Didone', sans-serif;
   --tp-ff-didoneright: 'Didone right', serif;
   --tp-ff-garamond: 'EB Garamond', serif;
-  --tp-ff-kufam: 'Kufam', sans-serif;
   --tp-ff-abril: 'Abril Fatface', cursive;
-  --tp-ff-playfair: 'Playfair Display', sans-serif;
   --tp-ff-fontawesome: "Font Awesome 6 Pro";
 
   /* ------------------------------------------------------------------------
@@ -85,7 +83,6 @@
   /* ------------------------------------------------------------------------
      Color Tokens — Dark Background Surfaces
      ------------------------------------------------------------------------ */
-  --tp-dark-black: #020B18;
   --tp-dark-black-3: #162251;
   --tp-dark-black-4: #0F183E;
 
@@ -93,9 +90,6 @@
      Color Tokens — Brand & Accents
      ------------------------------------------------------------------------ */
   --tp-theme-primary: #4C40F7;
-  --tp-blue-2: #4C40F7;
-  --tp-pink-2: #FF5746;
-  --tp-cream-2: #CFC292;
 
   /* ------------------------------------------------------------------------
      Color Tokens — Text & Headings
@@ -103,11 +97,6 @@
   --tp-headingDark-primary: #020B18;
   --tp-text-body: #55585B;
   --tp-text-1: #767A7D;
-
-  /* ------------------------------------------------------------------------
-     Color Tokens — Greys & Surfaces
-     ------------------------------------------------------------------------ */
-  --tp-grey-1: #F6F7F9;
 }
 /* <<< END 1-tokens/_variables.css <<< */
 
@@ -1758,7 +1747,7 @@ select,
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--tp-blue-2);
+  background-color: var(--tp-theme-primary);
   z-index: -1;
   border-radius: 100px;
 }
@@ -2065,53 +2054,6 @@ html[tp-theme=tp-theme-light] .blog-list__btn .tp-btn-black-lg {
   .preloader__title {
     font-size: 70px;
   }
-}
-
-.preloader__title-2 {
-  font-size: 170px;
-  line-height: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-  color: var(--tp-grey-1);
-}
-
-.preloader__title-2::before {
-  position: absolute;
-  content: attr(data-text-preloader);
-  top: 22px;
-  left: 0;
-  color: var(--tp-common-black);
-  opacity: 0;
-  -webkit-transform: rotateY(-90deg);
-  transform: rotateY(-90deg);
-  -webkit-animation: letters-loading 3s infinite;
-  animation: letters-loading 3s infinite;
-}
-
-.preloader__title-2:nth-child(2)::before {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-
-.preloader__title-2:nth-child(3)::before {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-
-.preloader__title-2:nth-child(4)::before {
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-
-.preloader__title-2:nth-child(5)::before {
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.preloader__title-2:nth-child(6)::before {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
 }
 
 .preloader__loading {
@@ -2584,17 +2526,6 @@ html[tp-theme=tp-theme-light] .cursor-white #ball {
 /* --------------------------------------------------------------------------
    2. Contact Section 2 Form Controls & Fieldsets
    -------------------------------------------------------------------------- */
-.tp-contact-2__title {
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: var(--tp-common-white);
-  font-family: var(--tp-ff-kufam);
-  margin-bottom: 50px;
-}
-
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-contact-2__top-info {
     margin-bottom: 80px;
@@ -2848,7 +2779,7 @@ html[tp-theme=tp-theme-light] .cursor-white #ball {
 }
 
 .tp-contact-2__select .nice-select .option:hover {
-  color: var(--tp-pink-2);
+  color: var(--tp-theme-primary);
 }
 
 .tp-contact-2__select .nice-select span.current {
@@ -4179,7 +4110,7 @@ html[tp-theme=tp-theme-light] .tp-hero-3__social-wrap a {
 }
 
 html[tp-theme=tp-theme-light] .tp-hero-3__social-wrap a:hover {
-  color: var(--tp-blue-2);
+  color: var(--tp-theme-primary);
 }
 /* <<< END 4-homepage/_hero.css <<< */
 /* >>> BEGIN 4-homepage/_services.css >>> */
@@ -6548,14 +6479,6 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .porfolio-details__navigation-bar span svg .path-2 {
   color: var(--tp-common-white);
-}
-
-.porfolio-details__navigation-bar.porfolio-details__navigation-bar-2 span svg .path-1 {
-  color: var(--tp-cream-2);
-}
-
-.porfolio-details__navigation-bar.porfolio-details__navigation-bar-2 span svg .path-2 {
-  color: var(--tp-cream-2);
 }
 
 /* --------------------------------------------------------------------------

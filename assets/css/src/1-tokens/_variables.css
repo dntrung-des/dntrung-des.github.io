@@ -14,9 +14,7 @@
   --tp-ff-didone: 'Didone', sans-serif;
   --tp-ff-didoneright: 'Didone right', serif;
   --tp-ff-garamond: 'EB Garamond', serif;
-  --tp-ff-kufam: 'Kufam', sans-serif;
   --tp-ff-abril: 'Abril Fatface', cursive;
-  --tp-ff-playfair: 'Playfair Display', sans-serif;
   --tp-ff-fontawesome: "Font Awesome 6 Pro";
 
   /* ------------------------------------------------------------------------
@@ -32,7 +30,6 @@
   /* ------------------------------------------------------------------------
      Color Tokens — Dark Background Surfaces
      ------------------------------------------------------------------------ */
-  --tp-dark-black: #020B18;
   --tp-dark-black-3: #162251;
   --tp-dark-black-4: #0F183E;
 
@@ -40,9 +37,6 @@
      Color Tokens — Brand & Accents
      ------------------------------------------------------------------------ */
   --tp-theme-primary: #4C40F7;
-  --tp-blue-2: #4C40F7;
-  --tp-pink-2: #FF5746;
-  --tp-cream-2: #CFC292;
 
   /* ------------------------------------------------------------------------
      Color Tokens — Text & Headings
@@ -50,9 +44,4 @@
   --tp-headingDark-primary: #020B18;
   --tp-text-body: #55585B;
   --tp-text-1: #767A7D;
-
-  /* ------------------------------------------------------------------------
-     Color Tokens — Greys & Surfaces
-     ------------------------------------------------------------------------ */
-  --tp-grey-1: #F6F7F9;
 }

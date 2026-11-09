@@ -914,5 +914,5 @@ html[tp-theme=tp-theme-light] .tp-hero-3__social-wrap a {
 }
 
 html[tp-theme=tp-theme-light] .tp-hero-3__social-wrap a:hover {
-  color: var(--tp-blue-2);
+  color: var(--tp-theme-primary);
 }

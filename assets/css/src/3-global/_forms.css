@@ -198,17 +198,6 @@
 /* --------------------------------------------------------------------------
    2. Contact Section 2 Form Controls & Fieldsets
    -------------------------------------------------------------------------- */
-.tp-contact-2__title {
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: var(--tp-common-white);
-  font-family: var(--tp-ff-kufam);
-  margin-bottom: 50px;
-}
-
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-contact-2__top-info {
     margin-bottom: 80px;
@@ -462,7 +451,7 @@
 }
 
 .tp-contact-2__select .nice-select .option:hover {
-  color: var(--tp-pink-2);
+  color: var(--tp-theme-primary);
 }
 
 .tp-contact-2__select .nice-select span.current {

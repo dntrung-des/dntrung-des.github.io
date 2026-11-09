@@ -113,14 +113,6 @@ only screen and (min-width: 576px) and (max-width: 767px),
   color: var(--tp-common-white);
 }
 
-.porfolio-details__navigation-bar.porfolio-details__navigation-bar-2 span svg .path-1 {
-  color: var(--tp-cream-2);
-}
-
-.porfolio-details__navigation-bar.porfolio-details__navigation-bar-2 span svg .path-2 {
-  color: var(--tp-cream-2);
-}
-
 /* --------------------------------------------------------------------------
    4. Case Navigation Light Theme Overrides
    -------------------------------------------------------------------------- */
