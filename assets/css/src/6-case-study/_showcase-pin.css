@@ -1,0 +1,25 @@
+/* ==========================================================================
+   CASE STUDY: PROJECT SHOWCASE & PANEL PINNING
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Showcase Panel Pinning & Image Styles
+   -------------------------------------------------------------------------- */
+.porfolio-details__thumb-box .tp-portfolio-item-3 img {
+  border-radius: 0px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Showcase Light Theme Overrides
+   -------------------------------------------------------------------------- */
+html[tp-theme=tp-theme-light] .tp-project-3__area {
+  background-color: var(--tp-common-white);
+}
+
+html[tp-theme=tp-theme-light] .tp-project-3__area .tp-section-title-3 {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .porfolio-details__overview-wrapper {
+  background-color: #F6F9FF;
+}

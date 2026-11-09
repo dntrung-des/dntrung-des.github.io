@@ -42,5 +42,9 @@
 @import url("5-portfolio/_portfolio-tabs.css");
 @import url("5-portfolio/_portfolio-grid.css");
 
-
-
+/* --------------------------------------------------------------------------
+   6. Case Study Components (Showcase Pin, Details, Navigation)
+   -------------------------------------------------------------------------- */
+@import url("6-case-study/_showcase-pin.css");
+@import url("6-case-study/_case-details.css");
+@import url("6-case-study/_case-nav.css");
