@@ -149,6 +149,7 @@ xclip
 /*  7.7 Hero css
 /*----------------------------------------*/
 .tp-hero-title {
+  font-family: var(--tp-ff-garamond);
   font-size: 133px;
   color: var(--tp-common-white);
   font-weight: 700;
@@ -177,6 +178,7 @@ xclip
 
 .tp-hero-title span,
 .tp-hero-title span b {
+  font-family: var(--tp-ff-garamond);
   background-image: -webkit-linear-gradient(90.68deg, #4C40F7 8.59%, #4C40F7 8.59%, #FFFFFF 86.19%);
   background-image: -moz-linear-gradient(90.68deg, #4C40F7 8.59%, #4C40F7 8.59%, #FFFFFF 86.19%);
   background-image: -ms-linear-gradient(90.68deg, #4C40F7 8.59%, #4C40F7 8.59%, #FFFFFF 86.19%);

@@ -16,7 +16,7 @@
    Google Fonts @import and Local Web Fonts (@font-face)
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&family=Kufam:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&family=Kufam:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap");
 
 @font-face {
   font-family: "Didone";
@@ -69,7 +69,6 @@
   --tp-ff-garamond: 'EB Garamond', serif;
   --tp-ff-kufam: 'Kufam', sans-serif;
   --tp-ff-abril: 'Abril Fatface', cursive;
-  --tp-ff-poppins: 'Poppins', sans-serif;
   --tp-ff-playfair: 'Playfair Display', sans-serif;
   --tp-ff-fontawesome: "Font Awesome 6 Pro";
 
@@ -77,36 +76,26 @@
      Color Tokens — Common Monochrome Palette
      ------------------------------------------------------------------------ */
   --tp-common-white: #ffffff;
-  --tp-common-white-2: #E4E6DC;
   --tp-common-white-3: #F0F0F6;
   --tp-common-black: #020B18;
   --tp-common-black-5: #171718;
   --tp-common-black-5-active: #5a3bff;
   --tp-common-black-6: #192553;
-  --tp-common-black-7: #121314;
-  --tp-common-black-8: #2E2E2E;
 
   /* ------------------------------------------------------------------------
      Color Tokens — Dark Background Surfaces
      ------------------------------------------------------------------------ */
   --tp-dark-black: #020B18;
-  --tp-dark-black-2: #000F4A;
   --tp-dark-black-3: #162251;
   --tp-dark-black-4: #0F183E;
-  --tp-dark-black-5: #213617;
 
   /* ------------------------------------------------------------------------
      Color Tokens — Brand & Accents
      ------------------------------------------------------------------------ */
   --tp-theme-primary: #4C40F7;
-  --tp-theme-secondary: #1A2813;
   --tp-blue-2: #4C40F7;
   --tp-pink-2: #FF5746;
-  --tp-cream-1: #B7AB98;
   --tp-cream-2: #CFC292;
-  --tp-green-2: #BCE70C;
-  --tp-coffe-1: #653624;
-  --tp-coffe-2: #552411;
 
   /* ------------------------------------------------------------------------
      Color Tokens — Text & Headings
@@ -119,8 +108,6 @@
      Color Tokens — Greys & Surfaces
      ------------------------------------------------------------------------ */
   --tp-grey-1: #F6F7F9;
-  --tp-grey-3: #F6F9FF;
-  --tp-footer-grey-1: #F4F7F9;
 }
 /* <<< END 1-tokens/_variables.css <<< */
 
@@ -3002,6 +2989,7 @@ html[tp-theme=tp-theme-light] .tp-contact-2__select::before {
    ========================================================================== */
 
 .tp-section-subtitle {
+  font-family: var(--tp-ff-garamond);
   font-weight: 600;
   font-size: 40px;
   line-height: 28px;
@@ -3095,6 +3083,7 @@ html[tp-theme=tp-theme-light] .tp-contact-2__select::before {
 }
 
 .tp-section-subtitle-bg {
+  font-family: var(--tp-ff-abril);
   position: absolute;
   top: -124px;
   left: -108px;
@@ -3124,6 +3113,7 @@ html[tp-theme=tp-theme-light] .tp-contact-2__select::before {
 }
 
 .tp-section-title {
+  font-family: var(--tp-ff-dmsans);
   font-size: 70px;
   letter-spacing: -0.02em;
   color: var(--tp-common-white);
@@ -3424,6 +3414,7 @@ xclip
 /*  7.7 Hero css
 /*----------------------------------------*/
 .tp-hero-title {
+  font-family: var(--tp-ff-garamond);
   font-size: 133px;
   color: var(--tp-common-white);
   font-weight: 700;
@@ -3452,6 +3443,7 @@ xclip
 
 .tp-hero-title span,
 .tp-hero-title span b {
+  font-family: var(--tp-ff-garamond);
   background-image: -webkit-linear-gradient(90.68deg, #4C40F7 8.59%, #4C40F7 8.59%, #FFFFFF 86.19%);
   background-image: -moz-linear-gradient(90.68deg, #4C40F7 8.59%, #4C40F7 8.59%, #FFFFFF 86.19%);
   background-image: -ms-linear-gradient(90.68deg, #4C40F7 8.59%, #4C40F7 8.59%, #FFFFFF 86.19%);
@@ -4313,6 +4305,7 @@ html[tp-theme=tp-theme-light] .tp-hero-3__social-wrap a:hover {
 
 .tp-services-bottom-text p,
 .tp-services-top-text p {
+  font-family: var(--tp-ff-abril);
   text-align: center;
   font-weight: 400;
   font-size: 180px;
@@ -5133,6 +5126,7 @@ html[tp-theme=tp-theme-light] .tp-accordion .accordion-item {
 }
 
 .tp-about-fact-item p {
+  font-family: var(--tp-ff-garamond);
   font-weight: 800;
   font-size: 18px;
   line-height: 0.93;
@@ -5246,6 +5240,7 @@ html[tp-theme=tp-theme-light] .tp-about-fact-item p {
 }
 
 .tp-skill-title {
+  font-family: var(--tp-ff-garamond);
   font-size: 20px;
   font-weight: 500;
   color: var(--tp-common-white);

@@ -120,6 +120,7 @@
 
 .tp-services-bottom-text p,
 .tp-services-top-text p {
+  font-family: var(--tp-ff-abril);
   text-align: center;
   font-weight: 400;
   font-size: 180px;

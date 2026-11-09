@@ -64,6 +64,7 @@
 }
 
 .tp-skill-title {
+  font-family: var(--tp-ff-garamond);
   font-size: 20px;
   font-weight: 500;
   color: var(--tp-common-white);

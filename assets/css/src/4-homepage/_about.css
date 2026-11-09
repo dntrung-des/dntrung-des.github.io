@@ -139,6 +139,7 @@
 }
 
 .tp-about-fact-item p {
+  font-family: var(--tp-ff-garamond);
   font-weight: 800;
   font-size: 18px;
   line-height: 0.93;

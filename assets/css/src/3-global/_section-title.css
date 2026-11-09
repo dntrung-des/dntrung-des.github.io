@@ -4,6 +4,7 @@
    ========================================================================== */
 
 .tp-section-subtitle {
+  font-family: var(--tp-ff-garamond);
   font-weight: 600;
   font-size: 40px;
   line-height: 28px;
@@ -97,6 +98,7 @@
 }
 
 .tp-section-subtitle-bg {
+  font-family: var(--tp-ff-abril);
   position: absolute;
   top: -124px;
   left: -108px;
@@ -126,6 +128,7 @@
 }
 
 .tp-section-title {
+  font-family: var(--tp-ff-dmsans);
   font-size: 70px;
   letter-spacing: -0.02em;
   color: var(--tp-common-white);
