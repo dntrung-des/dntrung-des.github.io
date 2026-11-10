@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Didone";
-  src: url("../../../fonts/didone-light.otf") format("woff");
+  src: url("../fonts/didone-light.otf") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: "Didone";
-  src: url("../../../fonts/didone-medium.otf") format("woff");
+  src: url("../fonts/didone-medium.otf") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: "Didone right";
-  src: url("../../../fonts/PP-Right-Didone-Medium.otf") format("woff");
+  src: url("../fonts/PP-Right-Didone-Medium.otf") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -31,7 +31,7 @@
 
 @font-face {
   font-family: "Didone right";
-  src: url("../../../fonts/PP-Right-Didone-Light.otf") format("woff");
+  src: url("../fonts/PP-Right-Didone-Light.otf") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 300;
