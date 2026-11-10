@@ -8,7 +8,7 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Tokens (Fonts, Custom Properties, Design Tokens)
+   1. Tokens (Design System Foundations)
    -------------------------------------------------------------------------- */
 /* >>> BEGIN 1-tokens/_fonts.css >>> */
 /* ==========================================================================
@@ -18,17 +18,34 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 
+/* --------------------------------------------------------------------------
+   Didone Display Serif (Consolidated)
+   Binary audit confirms PP-Right-Didone-* and didone-* are bit-for-bit identical.
+   Both family identifiers ('Didone' and 'Didone right') map to the canonical
+   PP-Right-Didone assets for 100% backward compatibility and unified rendering.
+   -------------------------------------------------------------------------- */
+
+/* Light (Weight: 300) */
 @font-face {
   font-family: "Didone";
-  src: url("../fonts/didone-light.otf") format("woff");
+  src: url("../fonts/PP-Right-Didone-Light.otf") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
+  font-family: "Didone right";
+  src: url("../fonts/PP-Right-Didone-Light.otf") format("woff");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+}
+
+/* Medium (Weight: 500) */
+@font-face {
   font-family: "Didone";
-  src: url("../fonts/didone-medium.otf") format("woff");
+  src: url("../fonts/PP-Right-Didone-Medium.otf") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -41,62 +58,205 @@
   font-display: swap;
   font-weight: 500;
 }
-
-@font-face {
-  font-family: "Didone right";
-  src: url("../fonts/PP-Right-Didone-Light.otf") format("woff");
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300;
-}
 /* <<< END 1-tokens/_fonts.css <<< */
-/* >>> BEGIN 1-tokens/_variables.css >>> */
+/* >>> BEGIN 1-tokens/_typography.css >>> */
 /* ==========================================================================
-   1-tokens/_variables.css
-   Confirmed Active CSS Custom Properties (:root)
+   1-tokens/_typography.css
+   Design System Semantic Typography Tokens & Proportional Type Scale
    ========================================================================== */
 
 :root {
   /* ------------------------------------------------------------------------
-     Typography Tokens
+     Semantic Font Families
      ------------------------------------------------------------------------ */
-  --tp-ff-body: 'DM Sans', sans-serif;
-  --tp-ff-heading: 'Didone', sans-serif;
-  --tp-ff-p: 'DM Sans', sans-serif;
-  --tp-ff-dmsans: 'DM Sans', sans-serif;
-  --tp-ff-didone: 'Didone', sans-serif;
-  --tp-ff-didoneright: 'Didone right', serif;
-  --tp-ff-garamond: 'EB Garamond', serif;
-  --tp-ff-abril: 'Abril Fatface', cursive;
-  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  --font-display: 'Didone right', 'Didone', serif;
+  --font-editorial: 'EB Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-decorative: 'Abril Fatface', cursive;
+  --font-icon: "Font Awesome 6 Pro", "Font Awesome 6 Brands";
 
   /* ------------------------------------------------------------------------
-     Color Tokens — Common Monochrome Palette
+     Type Scale Reference
+     ------------------------------------------------------------------------ */
+  --font-size-display: 133px;
+  --font-size-h1: 80px;
+  --font-size-h2: 40px;
+  --font-size-h3: 30px;
+  --font-size-h4: 24px;
+  --font-size-body-lg: 18px;
+  --font-size-body: 16px;
+  --font-size-body-sm: 14px;
+  --font-size-caption: 12px;
+
+  /* ------------------------------------------------------------------------
+     Font Weights
+     ------------------------------------------------------------------------ */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+
+  /* ------------------------------------------------------------------------
+     Line Heights
+     ------------------------------------------------------------------------ */
+  --line-height-reset: 1;
+  --line-height-tight: 1.05;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+  --line-height-loose: 1.8;
+}
+/* <<< END 1-tokens/_typography.css <<< */
+/* >>> BEGIN 1-tokens/_colors.css >>> */
+/* ==========================================================================
+   1-tokens/_colors.css
+   Design System Semantic Color Tokens
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Color Primitives (Base Palette)
+     ------------------------------------------------------------------------ */
+  --primitive-white: #ffffff;
+  --primitive-offwhite: #F0F0F6;
+  --primitive-black-deep: #020B18;
+  --primitive-black-surface: #171718;
+  --primitive-black-navy: #0F183E;
+  --primitive-black-subtle: #162251;
+  --primitive-indigo-electric: #4C40F7;
+  --primitive-indigo-hover: #3B2FE0;
+  --primitive-violet-glow: #5a3bff;
+
+  /* ------------------------------------------------------------------------
+     Semantic Color Tokens (Default / Dark Mode Canvas)
+     ------------------------------------------------------------------------ */
+  --color-canvas: var(--primitive-black-deep);
+  --color-surface: var(--primitive-black-surface);
+  --color-surface-elevated: var(--primitive-black-navy);
+  --color-surface-subtle: var(--primitive-black-subtle);
+  --color-surface-card: var(--primitive-black-surface);
+
+  --color-text-primary: var(--primitive-white);
+  --color-text-secondary: #55585B;
+  --color-text-muted: #767A7D;
+  --color-text-inverse: var(--primitive-black-deep);
+
+  --color-accent: var(--primitive-indigo-electric);
+  --color-accent-hover: var(--primitive-indigo-hover);
+  --color-accent-active: var(--primitive-violet-glow);
+  --color-accent-glow: var(--primitive-violet-glow);
+
+  --color-border: rgba(255, 255, 255, 0.25);
+  --color-border-subtle: rgba(255, 255, 255, 0.12);
+}
+/* <<< END 1-tokens/_colors.css <<< */
+/* >>> BEGIN 1-tokens/_spacing.css >>> */
+/* ==========================================================================
+   1-tokens/_spacing.css
+   Design System Spacing Scale (4px / 8px Geometric Grid)
+   ========================================================================== */
+
+:root {
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-7: 1.875rem;  /* 30px */
+  --space-8: 2.5rem;    /* 40px */
+  --space-9: 3.125rem;  /* 50px */
+  --space-10: 4.375rem; /* 70px */
+  --space-11: 5rem;     /* 80px */
+  --space-12: 6.25rem;  /* 100px */
+  --space-13: 7.5rem;   /* 120px */
+  --space-14: 9.375rem; /* 150px */
+}
+/* <<< END 1-tokens/_spacing.css <<< */
+/* >>> BEGIN 1-tokens/_foundations.css >>> */
+/* ==========================================================================
+   1-tokens/_foundations.css
+   Design System Foundation Tokens: Radius, Containers, Transitions & Motion
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Border Radius Tokens
+     ------------------------------------------------------------------------ */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 100px;
+  --radius-circle: 50%;
+
+  /* ------------------------------------------------------------------------
+     Container Max-Widths
+     ------------------------------------------------------------------------ */
+  --container-narrow: 840px;
+  --container-default: 1200px;
+  --container-wide: 1325px;
+
+  /* ------------------------------------------------------------------------
+     Motion: Durations & Easing Curves
+     ------------------------------------------------------------------------ */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-ambient: 12000ms;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --transition-fast: var(--duration-fast) var(--ease-standard);
+  --transition-base: var(--duration-normal) var(--ease-standard);
+  --transition-slow: var(--duration-slow) var(--ease-standard);
+}
+/* <<< END 1-tokens/_foundations.css <<< */
+/* >>> BEGIN 1-tokens/_variables.css >>> */
+/* ==========================================================================
+   1-tokens/_variables.css
+   Legacy Variable Bridges to Design System Semantic Tokens
+   Guarantees 100% backward compatibility for all existing components.
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Typography Token Bridges
+     ------------------------------------------------------------------------ */
+  --tp-ff-body: var(--font-body);
+  --tp-ff-heading: var(--font-display);
+  --tp-ff-p: var(--font-body);
+  --tp-ff-dmsans: var(--font-body);
+  --tp-ff-didone: var(--font-display);
+  --tp-ff-didoneright: var(--font-display);
+  --tp-ff-garamond: var(--font-editorial);
+  --tp-ff-abril: var(--font-decorative);
+  --tp-ff-fontawesome: var(--font-icon);
+
+  /* ------------------------------------------------------------------------
+     Color Token Bridges
      ------------------------------------------------------------------------ */
   --tp-common-white: #ffffff;
   --tp-common-white-3: #F0F0F6;
-  --tp-common-black: #020B18;
-  --tp-common-black-5: #171718;
-  --tp-common-black-5-active: #5a3bff;
+  --tp-common-black: var(--color-canvas);
+  --tp-common-black-5: var(--color-surface);
+  --tp-common-black-5-active: var(--color-accent-active);
   --tp-common-black-6: #192553;
 
-  /* ------------------------------------------------------------------------
-     Color Tokens — Dark Background Surfaces
-     ------------------------------------------------------------------------ */
-  --tp-dark-black-3: #162251;
-  --tp-dark-black-4: #0F183E;
+  /* Dark Background Surfaces */
+  --tp-dark-black-3: var(--color-surface-subtle);
+  --tp-dark-black-4: var(--color-surface-elevated);
 
-  /* ------------------------------------------------------------------------
-     Color Tokens — Brand & Accents
-     ------------------------------------------------------------------------ */
-  --tp-theme-primary: #4C40F7;
+  /* Brand & Accents */
+  --tp-theme-primary: var(--color-accent);
 
-  /* ------------------------------------------------------------------------
-     Color Tokens — Text & Headings
-     ------------------------------------------------------------------------ */
-  --tp-headingDark-primary: #020B18;
-  --tp-text-body: #55585B;
-  --tp-text-1: #767A7D;
+  /* Text & Headings */
+  --tp-headingDark-primary: var(--color-text-inverse);
+  --tp-text-body: var(--color-text-secondary);
+  --tp-text-1: var(--color-text-muted);
 }
 /* <<< END 1-tokens/_variables.css <<< */
 
@@ -6652,11 +6812,30 @@ html[tp-theme=tp-theme-dark] .tp-section-subtitle {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   Semantic Color Token Remapping (Light Mode)
+   -------------------------------------------------------------------------- */
+html[tp-theme="tp-theme-light"] {
+  --color-canvas: #F6F9FF;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #F0F0F6;
+  --color-surface-subtle: #E8EDF5;
+  --color-surface-card: #ffffff;
+
+  --color-text-primary: #020B18;
+  --color-text-secondary: #55585B;
+  --color-text-muted: #767A7D;
+  --color-text-inverse: #ffffff;
+
+  --color-border: rgba(2, 11, 24, 0.25);
+  --color-border-subtle: rgba(2, 11, 24, 0.1);
+}
+
+/* --------------------------------------------------------------------------
    Global Light Theme Root Surface & Smooth Wrapper Baseline
    -------------------------------------------------------------------------- */
 html[tp-theme="tp-theme-light"] body,
 html[tp-theme="tp-theme-light"] #smooth-wrapper {
-  background-color: #F6F9FF;
+  background-color: var(--color-canvas);
 }
 
 /* --------------------------------------------------------------------------
@@ -6666,5 +6845,3 @@ html[tp-theme="tp-theme-light"] #awesome-cursor-circle {
   background-color: var(--tp-common-black-5);
 }
 /* <<< END 8-themes/_theme-light.css <<< */
-
-

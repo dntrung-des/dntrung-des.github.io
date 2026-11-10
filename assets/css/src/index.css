@@ -3,9 +3,13 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Tokens (Fonts, Custom Properties, Design Tokens)
+   1. Tokens (Design System Foundations)
    -------------------------------------------------------------------------- */
 @import url("1-tokens/_fonts.css");
+@import url("1-tokens/_typography.css");
+@import url("1-tokens/_colors.css");
+@import url("1-tokens/_spacing.css");
+@import url("1-tokens/_foundations.css");
 @import url("1-tokens/_variables.css");
 
 /* --------------------------------------------------------------------------
@@ -60,5 +64,3 @@
    -------------------------------------------------------------------------- */
 @import url("8-themes/_theme-base.css");
 @import url("8-themes/_theme-light.css");
-
-

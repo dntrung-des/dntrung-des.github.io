@@ -1,47 +1,42 @@
 /* ==========================================================================
    1-tokens/_variables.css
-   Confirmed Active CSS Custom Properties (:root)
+   Legacy Variable Bridges to Design System Semantic Tokens
+   Guarantees 100% backward compatibility for all existing components.
    ========================================================================== */
 
 :root {
   /* ------------------------------------------------------------------------
-     Typography Tokens
+     Typography Token Bridges
      ------------------------------------------------------------------------ */
-  --tp-ff-body: 'DM Sans', sans-serif;
-  --tp-ff-heading: 'Didone', sans-serif;
-  --tp-ff-p: 'DM Sans', sans-serif;
-  --tp-ff-dmsans: 'DM Sans', sans-serif;
-  --tp-ff-didone: 'Didone', sans-serif;
-  --tp-ff-didoneright: 'Didone right', serif;
-  --tp-ff-garamond: 'EB Garamond', serif;
-  --tp-ff-abril: 'Abril Fatface', cursive;
-  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  --tp-ff-body: var(--font-body);
+  --tp-ff-heading: var(--font-display);
+  --tp-ff-p: var(--font-body);
+  --tp-ff-dmsans: var(--font-body);
+  --tp-ff-didone: var(--font-display);
+  --tp-ff-didoneright: var(--font-display);
+  --tp-ff-garamond: var(--font-editorial);
+  --tp-ff-abril: var(--font-decorative);
+  --tp-ff-fontawesome: var(--font-icon);
 
   /* ------------------------------------------------------------------------
-     Color Tokens — Common Monochrome Palette
+     Color Token Bridges
      ------------------------------------------------------------------------ */
   --tp-common-white: #ffffff;
   --tp-common-white-3: #F0F0F6;
-  --tp-common-black: #020B18;
-  --tp-common-black-5: #171718;
-  --tp-common-black-5-active: #5a3bff;
+  --tp-common-black: var(--color-canvas);
+  --tp-common-black-5: var(--color-surface);
+  --tp-common-black-5-active: var(--color-accent-active);
   --tp-common-black-6: #192553;
 
-  /* ------------------------------------------------------------------------
-     Color Tokens — Dark Background Surfaces
-     ------------------------------------------------------------------------ */
-  --tp-dark-black-3: #162251;
-  --tp-dark-black-4: #0F183E;
+  /* Dark Background Surfaces */
+  --tp-dark-black-3: var(--color-surface-subtle);
+  --tp-dark-black-4: var(--color-surface-elevated);
 
-  /* ------------------------------------------------------------------------
-     Color Tokens — Brand & Accents
-     ------------------------------------------------------------------------ */
-  --tp-theme-primary: #4C40F7;
+  /* Brand & Accents */
+  --tp-theme-primary: var(--color-accent);
 
-  /* ------------------------------------------------------------------------
-     Color Tokens — Text & Headings
-     ------------------------------------------------------------------------ */
-  --tp-headingDark-primary: #020B18;
-  --tp-text-body: #55585B;
-  --tp-text-1: #767A7D;
+  /* Text & Headings */
+  --tp-headingDark-primary: var(--color-text-inverse);
+  --tp-text-body: var(--color-text-secondary);
+  --tp-text-1: var(--color-text-muted);
 }

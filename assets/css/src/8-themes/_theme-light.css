@@ -5,11 +5,30 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   Semantic Color Token Remapping (Light Mode)
+   -------------------------------------------------------------------------- */
+html[tp-theme="tp-theme-light"] {
+  --color-canvas: #F6F9FF;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #F0F0F6;
+  --color-surface-subtle: #E8EDF5;
+  --color-surface-card: #ffffff;
+
+  --color-text-primary: #020B18;
+  --color-text-secondary: #55585B;
+  --color-text-muted: #767A7D;
+  --color-text-inverse: #ffffff;
+
+  --color-border: rgba(2, 11, 24, 0.25);
+  --color-border-subtle: rgba(2, 11, 24, 0.1);
+}
+
+/* --------------------------------------------------------------------------
    Global Light Theme Root Surface & Smooth Wrapper Baseline
    -------------------------------------------------------------------------- */
 html[tp-theme="tp-theme-light"] body,
 html[tp-theme="tp-theme-light"] #smooth-wrapper {
-  background-color: #F6F9FF;
+  background-color: var(--color-canvas);
 }
 
 /* --------------------------------------------------------------------------
