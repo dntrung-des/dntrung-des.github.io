@@ -5586,6 +5586,7 @@ html[tp-theme=tp-theme-light] .tp-skill-title {
   margin-right: 12px;
   transition: 0.3s;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
