@@ -75,64 +75,98 @@
 	});
 
 
-	document.addEventListener("DOMContentLoaded", function () {
-		const header = document.querySelector(".header-dynamic");
-		const homeLink = document.querySelector(".header-items .header-item:first-child .nav-link-custom");
-	
-		if (!header) return;
-	
-		let lastScrollY = window.scrollY;
-	
-		window.addEventListener("scroll", function () {
-			let currentScrollY = window.scrollY;
-	
-			if (currentScrollY > 100) {
-				header.classList.add("header-small");
-	
-				// Đẩy header về trái hoặc phải dựa vào vị trí
-				if (window.innerWidth / 2 < header.getBoundingClientRect().left) {
-					header.classList.add("right");
-					header.classList.remove("left");
+	// 02. Header Interaction (3-Zone Top State, Compact Floating Scrolled Dock, Accessible Mobile Navigation)
+	(function () {
+		function initHeader() {
+			var header = document.querySelector('.header-area');
+			if (!header) return;
+
+			var toggleBtn = document.querySelector('.header-mobile-toggle');
+			var mobileMenu = document.getElementById('header-mobile-menu');
+			var mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-cv-btn, .mobile-cta-btn');
+			var lastScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+			var scrollThreshold = 80;
+
+			function handleScroll() {
+				var currentScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+				if (currentScrollY <= scrollThreshold) {
+					header.classList.remove('is-scrolled');
 				} else {
-					header.classList.add("left");
-					header.classList.remove("right");
+					if (currentScrollY < lastScrollY - 2) {
+						header.classList.remove('is-scrolled');
+					} else if (currentScrollY > lastScrollY + 2) {
+						header.classList.add('is-scrolled');
+					}
 				}
-	
-				if (homeLink) homeLink.classList.remove("active"); // Xoá class active khỏi Home
-			} else {
-				header.classList.remove("header-small", "left", "right");
+				lastScrollY = currentScrollY;
 			}
-	
-			// Khi cuộn lên → mở rộng lại header ngay lập tức
-			if (currentScrollY < lastScrollY) {
-				header.classList.remove("header-small", "left", "right");
-			}
-	
-			lastScrollY = currentScrollY;
-		});
-	
-		// Hover vào header nhỏ → mở rộng lại
-		header.addEventListener("mouseenter", function () {
-			if (header.classList.contains("header-small")) {
-				header.classList.remove("header-small", "left", "right");
-			}
-		});
-	
-		// Rời chuột → thu nhỏ lại nếu đã scroll (chỉ khi đang ở header nhỏ)
-		header.addEventListener("mouseleave", function () {
-			if (window.scrollY > 100 && !header.classList.contains("header-small")) {
-				header.classList.add("header-small");
-	
-				if (window.innerWidth / 2 < header.getBoundingClientRect().left) {
-					header.classList.add("right");
-					header.classList.remove("left");
-				} else {
-					header.classList.add("left");
-					header.classList.remove("right");
+
+			window.addEventListener('scroll', handleScroll, { passive: true });
+			handleScroll();
+
+			function closeMobileMenu() {
+				if (!header.classList.contains('is-menu-open')) return;
+				header.classList.remove('is-menu-open');
+				if (toggleBtn) {
+					toggleBtn.setAttribute('aria-expanded', 'false');
+					toggleBtn.focus();
+				}
+				if (mobileMenu) {
+					mobileMenu.setAttribute('aria-hidden', 'true');
 				}
 			}
-		});
-	});
+
+			function openMobileMenu() {
+				header.classList.add('is-menu-open');
+				if (toggleBtn) {
+					toggleBtn.setAttribute('aria-expanded', 'true');
+				}
+				if (mobileMenu) {
+					mobileMenu.setAttribute('aria-hidden', 'false');
+					var firstLink = mobileMenu.querySelector('a');
+					if (firstLink) firstLink.focus();
+				}
+			}
+
+			if (toggleBtn) {
+				toggleBtn.addEventListener('click', function (e) {
+					e.stopPropagation();
+					var isOpen = header.classList.contains('is-menu-open');
+					if (isOpen) {
+						closeMobileMenu();
+					} else {
+						openMobileMenu();
+					}
+				});
+			}
+
+			mobileLinks.forEach(function (link) {
+				link.addEventListener('click', function () {
+					closeMobileMenu();
+				});
+			});
+
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape' || e.keyCode === 27) {
+					closeMobileMenu();
+				}
+			});
+
+			document.addEventListener('click', function (e) {
+				if (header.classList.contains('is-menu-open')) {
+					if (!header.contains(e.target)) {
+						closeMobileMenu();
+					}
+				}
+			});
+		}
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initHeader);
+		} else {
+			initHeader();
+		}
+	})();
 
 
 	$('.tp-services-accordion-item').on("click", function () {
@@ -640,5 +674,9 @@
 		$('body').removeClass('cursor-white')
 	});
 
+	// Nice Select
+	if ($.fn.niceSelect) {
+		$('.tp-contact-2__select select').niceSelect();
+	}
 
 })(jQuery);

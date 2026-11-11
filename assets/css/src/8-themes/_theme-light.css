@@ -21,6 +21,8 @@ html[tp-theme="tp-theme-light"] {
 
   --color-border: rgba(2, 11, 24, 0.25);
   --color-border-subtle: rgba(2, 11, 24, 0.1);
+
+  --tp-common-black-5: #171718;
 }
 
 /* --------------------------------------------------------------------------

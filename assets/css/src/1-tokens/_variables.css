@@ -24,7 +24,7 @@
   --tp-common-white: #ffffff;
   --tp-common-white-3: #F0F0F6;
   --tp-common-black: var(--color-canvas);
-  --tp-common-black-5: var(--color-surface);
+  --tp-common-black-5: #171718;
   --tp-common-black-5-active: var(--color-accent-active);
   --tp-common-black-6: #192553;
 

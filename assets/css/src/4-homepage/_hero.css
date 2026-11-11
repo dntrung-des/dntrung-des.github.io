@@ -84,7 +84,6 @@
 }
 
 .cd-words-wrapper .app {
-  transform: translateY(-10px);
   display: inline-block;
 }
 
@@ -94,6 +93,7 @@
   white-space: nowrap;
   left: 0;
   top: 0;
+  font-size: 0.85em;
 }
 
 .cd-words-wrapper b.is-visible {
@@ -170,6 +170,12 @@ xclip
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-hero-title {
+    font-size: 70px;
+  }
+}
+
 @media (max-width: 767px) {
   .tp-hero-title {
     font-size: 50px;
@@ -191,6 +197,7 @@ xclip
 }
 
 .tp-hero-title span b {
+  font-size: 0.85em;
   padding-right: 3px;
 }
 

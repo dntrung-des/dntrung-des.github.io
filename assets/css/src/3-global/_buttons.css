@@ -11,11 +11,13 @@
 .tp-btn-blue span.text::after,
 .tp-btn-blue::after,
 .back-to-top-wrapper,
-a,
-button,
-p,
-input,
-select,
+.transition-3 {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
 
 /* Button SVG Vertical Alignment */
 .tp-btn svg,
@@ -249,6 +251,7 @@ select,
   height: 1px;
   background-color: var(--tp-common-white);
   z-index: -1;
+  transition: all 0.3s ease-out;
 }
 
 .tp-btn-blue span.icon {
@@ -265,6 +268,7 @@ select,
   background-color: var(--tp-theme-primary);
   z-index: -1;
   border-radius: 100px;
+  transition: width 0.3s ease-out, background-color 0.3s ease-out;
 }
 
 .tp-btn-blue:hover {

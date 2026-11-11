@@ -136,32 +136,80 @@
          </label>
       </div>
    </div>
-   <header class="header-dynamic shadow">
-      <div class="header-logo">
-         <a href="/">
-            <img src="/assets/img/logo/logo_full_black.png" class="logo_img">
-            <img src="/assets/img/logo/logo_white.png" class="logo_img_sm">
-         </a>
+   <header class="header-area" id="header-navbar">
+      <div class="header-container">
+         <!-- Left Zone: Logo / Brand -->
+         <div class="header-zone-left">
+            <a href="/" class="header-logo-link" aria-label="Trung Dao - Homepage">
+               <img src="/assets/img/logo/logo_full_black.png" alt="Trung Dao" class="logo-main logo-dark">
+               <img src="/assets/img/logo/logo_full_light.png" alt="Trung Dao" class="logo-main logo-light">
+               <img src="/assets/img/logo/logo_white.png" alt="Trung Dao" class="logo-icon">
+            </a>
+         </div>
 
-      </div>
-      <div class="header-spacer"></div>
-      <ul class="header-items">
-         <li class="header-item home-item"><a href="/" class="nav-link-custom">Home</a></li>
-         <li class="header-item about-item"><a href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" class="nav-link-custom">Resume</a></li>
-         <li class="header-item project-item"><a href="/portfolio.html" class="nav-link-custom active">Portfolio</a></li>
-         <li class="header-item contact-item"><a href="#contact" class="nav-link-custom">Contact</a></li>
-         <li class="header-item header-item-right contact-item">
-           <a class="tp-btn-white mt-2" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank">
+         <!-- Dock Divider (left) -->
+         <span class="header-dock-divider" aria-hidden="true"></span>
+
+         <!-- Center Zone: Primary Navigation Menu -->
+         <nav class="header-zone-center" aria-label="Main Navigation">
+            <ul class="header-nav-list">
+               <li class="header-nav-item">
+                  <a href="/" class="header-nav-link">Home</a>
+               </li>
+               <li class="header-nav-item">
+                  <a href="/#about" class="header-nav-link">About Me</a>
+               </li>
+               <li class="header-nav-item">
+                  <a href="/portfolio.html" class="header-nav-link active">Projects</a>
+               </li>
+               <li class="header-nav-item">
+                  <a href="/#contact" class="header-nav-link">Contact</a>
+               </li>
+            </ul>
+         </nav>
+
+         <!-- Dock Divider (right) -->
+         <span class="header-dock-divider" aria-hidden="true"></span>
+
+         <!-- Right Zone: CTA & Mobile Toggle -->
+         <div class="header-zone-right">
+            <a class="tp-btn-white mt-2 header-cv-cta" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
                <span class="text">CV</span>
-               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor"
-                     stroke-width="1.5" stroke-linecap="round"></path>
-                  <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5"
-                     stroke-linecap="round" stroke-linejoin="round"></path>
+               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                  <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                </svg>
             </a>
-         </li>
-      </ul>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button type="button" class="header-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="header-mobile-menu">
+               <span class="hamburger-line line-1"></span>
+               <span class="hamburger-line line-2"></span>
+               <span class="hamburger-line line-3"></span>
+            </button>
+         </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="header-mobile-menu" id="header-mobile-menu" aria-hidden="true">
+         <nav class="mobile-nav-inner" aria-label="Mobile Navigation">
+            <ul class="mobile-nav-list">
+               <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">Home</a></li>
+               <li class="mobile-nav-item"><a href="/#about" class="mobile-nav-link">About Me</a></li>
+               <li class="mobile-nav-item"><a href="/portfolio.html" class="mobile-nav-link active">Projects</a></li>
+               <li class="mobile-nav-item"><a href="/#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-cta">
+               <a class="tp-btn-white mobile-cv-btn" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
+                  <span class="text">CV</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                     <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                     <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </a>
+            </div>
+         </nav>
+      </div>
    </header>
 
    <!-- Scroll Smoother -->

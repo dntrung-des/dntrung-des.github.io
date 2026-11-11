@@ -79,59 +79,80 @@
          </label>
       </div>
    </div>
-   <header class="header-dynamic shadow">
-      <div class="header-logo">
-         <a href="/">
-            <img src="/assets/img/logo/logo_full_black.png" class="logo_img">
-            <img src="/assets/img/logo/logo_white.png" class="logo_img_sm">
-         </a>
+   <header class="header-area" id="header-navbar">
+      <div class="header-container">
+         <!-- Left Zone: Logo / Brand -->
+         <div class="header-zone-left">
+            <a href="/" class="header-logo-link" aria-label="Trung Dao - Homepage">
+               <img src="/assets/img/logo/logo_full_black.png" alt="Trung Dao" class="logo-main logo-dark">
+               <img src="/assets/img/logo/logo_full_light.png" alt="Trung Dao" class="logo-main logo-light">
+               <img src="/assets/img/logo/logo_white.png" alt="Trung Dao" class="logo-icon">
+            </a>
+         </div>
 
-      </div>
-      <div class="header-spacer"></div>
-      <ul class="header-items">
-         <li class="header-item home-item"><a href="/" class="nav-link-custom active">Home</a></li>
-         <li class="header-item about-item"><a href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" class="nav-link-custom">Resume</a></li>
-         <li class="header-item project-item"><a href="/portfolio.html" class="nav-link-custom">Portfolio</a></li>
-         <li class="header-item contact-item"><a href="#contact" class="nav-link-custom">Contact</a></li>
-         <li class="header-item header-item-right contact-item">
-            <a class="tp-btn-white mt-2" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank">
+         <!-- Dock Divider (left) -->
+         <span class="header-dock-divider" aria-hidden="true"></span>
+
+         <!-- Center Zone: Primary Navigation Menu -->
+         <nav class="header-zone-center" aria-label="Main Navigation">
+            <ul class="header-nav-list">
+               <li class="header-nav-item">
+                  <a href="/" class="header-nav-link active">Home</a>
+               </li>
+               <li class="header-nav-item">
+                  <a href="#about" class="header-nav-link">About Me</a>
+               </li>
+               <li class="header-nav-item">
+                  <a href="/portfolio.html" class="header-nav-link">Projects</a>
+               </li>
+               <li class="header-nav-item">
+                  <a href="#contact" class="header-nav-link">Contact</a>
+               </li>
+            </ul>
+         </nav>
+
+         <!-- Dock Divider (right) -->
+         <span class="header-dock-divider" aria-hidden="true"></span>
+
+         <!-- Right Zone: CTA & Mobile Toggle -->
+         <div class="header-zone-right">
+            <a class="tp-btn-white mt-2 header-cv-cta" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
                <span class="text">CV</span>
-               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor"
-                     stroke-width="1.5" stroke-linecap="round"></path>
-                  <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5"
-                     stroke-linecap="round" stroke-linejoin="round"></path>
+               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                  <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                </svg>
             </a>
-         </li>
-         <!-- <li class="header-item contact-item">
-            <div class="tp-theme-toggle-single">
-               <label class="tp-theme-toggle-main themepure-theme-toggle light-active">
-                  <span class="dark">
-                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 7.63063C13.8774 8.95738 13.3795 10.2218 12.5645 11.2759C11.7495 12.33 10.6512 13.1301 9.39801 13.5828C8.14485 14.0354 6.78869 14.1218 5.48822 13.8319C4.18775 13.5419 2.99676 12.8875 2.05461 11.9454C1.11246 11.0032 0.458115 9.81225 0.168141 8.51178C-0.121832 7.21131 -0.0354396 5.85515 0.41721 4.60199C0.86986 3.34883 1.67005 2.2505 2.72413 1.43552C3.77822 0.620536 5.04262 0.122609 6.36937 0C5.5926 1.05088 5.21881 2.34566 5.31599 3.64884C5.41317 4.95202 5.97487 6.17704 6.89892 7.10109C7.82296 8.02513 9.04798 8.58683 10.3512 8.68401C11.6543 8.78119 12.9491 8.4074 14 7.63063Z" fill="white"></path>
-                     </svg>
-                  </span>
-                  <input type="checkbox" class="themepure-theme-toggle-input">
-                  <span class="light">
-                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.0581 14.2166C12.3522 14.2166 14.212 12.3569 14.212 10.0628C14.212 7.7687 12.3522 5.90897 10.0581 5.90897C7.76403 5.90897 5.9043 7.7687 5.9043 10.0628C5.9043 12.3569 7.76403 14.2166 10.0581 14.2166Z" fill="#FFC05A"></path>
-                        <path d="M10 1V2.63636" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M10 17.3637V19.0001" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M3.63477 3.63455L4.79658 4.79637" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M15.2031 15.2036L16.3649 16.3654" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M1 10.0001H2.63636" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M17.3652 10.0001H19.0016" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M3.63477 16.3654L4.79658 15.2036" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M15.2031 4.79637L16.3649 3.63455" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                     </svg>
-                  </span>
-               </label>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button type="button" class="header-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="header-mobile-menu">
+               <span class="hamburger-line line-1"></span>
+               <span class="hamburger-line line-2"></span>
+               <span class="hamburger-line line-3"></span>
+            </button>
+         </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="header-mobile-menu" id="header-mobile-menu" aria-hidden="true">
+         <nav class="mobile-nav-inner" aria-label="Mobile Navigation">
+            <ul class="mobile-nav-list">
+               <li class="mobile-nav-item"><a href="/" class="mobile-nav-link active">Home</a></li>
+               <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">About Me</a></li>
+               <li class="mobile-nav-item"><a href="/portfolio.html" class="mobile-nav-link">Projects</a></li>
+               <li class="mobile-nav-item"><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-cta">
+               <a class="tp-btn-white mobile-cv-btn" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
+                  <span class="text">CV</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                     <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                     <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </a>
             </div>
-              
-            
-         </li> -->
-      </ul>
+         </nav>
+      </div>
    </header>
 
 
@@ -175,10 +196,10 @@
                </div>
 
                <div class="tp-hero-3__social-wrap d-none d-lg-inline-flex">
-                  <a href="https://www.facebook.com/dntrung0444" target="_blank">Facebook</a>
-                  <a href="https://www.youtube.com/@dntrung044" target="_blank">Youtube</a>
+                  <!-- <a href="https://www.facebook.com/dntrung0444" target="_blank">Facebook</a> -->
                   <a href="https://www.behance.net/dntrung044" target="_blank">Behance</a>
                   <a href="https://github.com/dntrung044" target="_blank">Github</a>
+                  <a href="https://www.youtube.com/@dntrung044" target="_blank">Youtube</a>
                </div>
 
                <a href="#about">
@@ -200,9 +221,9 @@
                   <div class="row align-items-end">
                      <div class="col-xl-12">
                         <div class="tp-hero-3__btn-box">
-                           <p class="tp-char-animation">
+                           <p class="tp-char-animation mb-5">
                               <img src="/assets/img/hero/hero-hand.png" alt="" class="tp-char-animation">
-                              Hello, I'm Đào Nhật Trung!
+                              Hello, I'm Trung!
                            </p>
                         </div>
                         <div class="tp-hero-3__content">
@@ -220,7 +241,7 @@
 
                         </div>
                         <div class="tp-hero-3__btn-box tp_wrap_anim">
-                           <p class="mb-4">Crafting intuitive digital products, design systems, and interactive web experiences.</p>
+                           <p class="ms-0">Crafting intuitive digital products, design systems, and interactive web experiences.</p>
                            <div class="ab-hero__btn-box">
                                <a class="tp-btn-blue" href="/portfolio.html">
                                  <span class="text">See Portfolio</span>
@@ -300,13 +321,10 @@
                         <div class="col-xl-7 col-lg-7">
                            <div class="tp-about-desc">
                               <div class="tp-about-desc-content mb-40">
-                                 <p>Hi! I’m <span>Trung</span> – a curious designer who turns <span>MESSY IDEAS</span> into <span>NEAT INTERFACES</span>.</p>
-
-<p>I specialize in <span><strong>UI/UX Design</strong></span> and have a background in <span><strong>Web Development</strong></span>, so I know how to turn pixels into real products.</p>
-
-<p>From sketching wireframes to tweaking final details (and even fixing bugs!), I love crafting <span><strong>FUN</strong></span>, <span>USER-CENTERED</span> digital experiences that work.</p>
-
-<p>Always curious, always improving — let’s create something <span><strong>amazing</strong></span> together!</p>
+                                 <p>Hi, I’m <span>Trung</span> — a UI/UX Designer passionate about turning <span><strong>complex ideas</strong></span> into <span><strong>clear, thoughtful digital experiences</strong></span>.</p>
+                                 <p>With a background in <span><strong>Web Development</strong></span>, I bring both design thinking and technical understanding to my work. From early concepts and wireframes to polished interfaces, I focus on creating <span><strong>user-centered solutions</strong></span> that are practical to build.</p>
+                                 <p>I’m always curious, continuously learning, and driven by the challenge of making digital products <span><strong>simpler, more intuitive, and meaningful</strong></span>.</p>
+                                 <p>Let’s create something <span><strong>great together</strong></span>.</p>
                               </div>
                               <div class="tp-about-fact">
                                  <div class="row">
@@ -360,7 +378,7 @@
                                  <div class="tp-section-title-inner p-relative">
                                     <h3 class="tp-section-title-3 tp_title_anim">What<br> i'm doing.</h3>
                                  </div>
-                                 <p>The combination of my passion for design, code & interaction web design world.</p>
+                                 <p>The combination of my passion for design, code and interactive web design world.</p>
                               </div>
                               <div class="tp-services-capsule-item-wrapper">
                                  <p data-tp-throwable-el="">
@@ -370,7 +388,7 @@
                                     <span class="tp-services-capsule-item" data-bg-color="#00CC97">#DESIGN SYSTEM</span>
                                  </p>
                                  <p data-tp-throwable-el="">
-                                    <span class="tp-services-capsule-item" data-bg-color="#19B3F1">#MOBILE APP</span>
+                                    <span class="tp-services-capsule-item" data-bg-color="#19B3F1">#WIREFRAMING</span>
                                  </p>
                                  <p data-tp-throwable-el="">
                                     <span class="tp-services-capsule-item" data-bg-color="#FFDB59">#PROTOTYPING</span>
@@ -380,7 +398,7 @@
                                  </p>
 
                                  <p data-tp-throwable-el="">
-                                    <span class="tp-services-capsule-item" data-bg-color="#00CC97">#INTERACTION</span>
+                                    <span class="tp-services-capsule-item" data-bg-color="#00CC97">#RESPONSIVE WEB</span>
                                  </p>
                                  <p data-tp-throwable-el="">
                                     <span class="tp-services-capsule-item" data-bg-color="#FF759C">#TYPOGRAPHY</span>
@@ -388,21 +406,21 @@
 
                                  <p data-tp-throwable-el="">
                                     <span class="tp-services-capsule-item" data-bg-color="#19B3F1"
-                                       data-text-color="#121212">#WEB/APP DESIGN</span>
+                                       data-text-color="#121212">#FRONTEND</span>
                                  </p>
-                                 <p data-tp-throwable-el="">
+                                 <!-- <p data-tp-throwable-el="">
                                     <span class="tp-services-capsule-item" data-bg-color="#00CC97"
-                                       data-text-color="#121212">#LARAVEL</span>
-                                 </p>
+                                       data-text-color="#121212">#INTERACTION DESIGN</span>
+                                 </p>  
 
-                                 <p data-tp-throwable-el="">
+                             <p data-tp-throwable-el="">
                                     <span class="tp-services-capsule-item" data-bg-color="#FF759C"
                                        data-text-color="#121212">#FRONTEND</span>
                                  </p>
                                  <p data-tp-throwable-el="">
                                     <span class="tp-services-capsule-item" data-bg-color="#19B3F1"
                                        data-text-color="#121212">#GSAP MOTION</span>
-                                 </p>
+                                 </p> -->
 
                                  <p data-tp-throwable-el="">
                                     <span class="">
@@ -491,7 +509,7 @@
                                           data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                           aria-expanded="false" aria-controls="collapseThree">
                                           <span>03</span>
-                                          Web Development & Interaction
+                                          Web Development
                                        </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
@@ -914,20 +932,13 @@
                                           </div>
                                           <div class="col-xl-4 col-lg-4 mb-50">
                                              <div class="tp-contact-2__select">
-                                                <select class="input-field" style="display: none;">
-                                                   <option>Subject (optional)</option>
-                                                   <option>Greeting</option>
-                                                   <option>Recruitment</option>
+                                                <select class="input-field" name="subject" id="contact-subject" aria-label="Subject (optional)">
+                                                   <option value="">Subject (optional)</option>
+                                                   <option value="Greeting">Greeting</option>
+                                                   <option value="Recruitment">Recruitment</option>
+                                                   <option value="Project Inquiry">Project Inquiry</option>
+                                                   <option value="Other">Other</option>
                                                 </select>
-                                                <div class="nice-select input-field" tabindex="0">
-                                                   <span class="current">Subject (optional)</span>
-                                                   <ul class="list">
-                                                      <li data-value="Subject (optional)" class="option selected focus">
-                                                         Subject (optional)</li>
-                                                      <li data-value="Greeting" class="option">Greeting</li>
-                                                      <li data-value="Recruitment" class="option">Recruitment</li>
-                                                   </ul>
-                                                </div>
                                                 <span class="focus-border"></span>
                                              </div>
                                           </div>
@@ -1003,6 +1014,7 @@
    <script src="/assets/js/throwable.js"></script>
    <script src="/assets/js/theme-settings.js"></script>
    <script src="/assets/js/animated-headline.js"></script>
+   <script src="/assets/js/nice-select.js"></script>
    <script src="/assets/js/main.js"></script>
    <script src="/assets/js/tp-cursor.js"></script>
 
