@@ -793,19 +793,20 @@ textarea {
   left: 0;
   right: 0;
   width: 100%;
-  height: 62px;
+  height: 56px;
   display: flex;
   justify-content: center;
   z-index: 10000;
   pointer-events: none;
-  transition: top 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: top 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .header-container {
   box-sizing: border-box;
   width: 90%;
   max-width: 1240px;
-  height: 62px;
+  height: 56px;
   padding: 0 32px;
   display: flex;
   align-items: center;
@@ -815,13 +816,13 @@ textarea {
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
   box-shadow: none;
-  transition: max-width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              padding 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              gap 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              gap 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -853,17 +854,18 @@ textarea {
 /* Full horizontal brand logo at top state */
 .header-logo-link .logo-main {
   display: block;
-  height: 40px;
+  height: 38px;
   width: auto;
   max-width: 160px;
   opacity: 1;
   visibility: visible;
   transform: scale(1);
   transform-origin: left center;
-  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.45s;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.4s;
 }
 
 /* Theme-specific logo switching (Clean asset rendering, no invert artifacts) */
@@ -930,19 +932,19 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
 .header-zone-center {
   display: flex;
   align-items: center;
-  height: 48px;
+  height: 44px;
   background: rgba(15, 24, 62, 0.75);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-pill);
-  padding: 4px 8px;
+  padding: 3px 6px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  transition: background-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              padding 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .header-nav-list {
@@ -964,10 +966,10 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 40px;
-  padding: 8px 15px;
+  min-height: 38px;
+  padding: 6px 14px;
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 500;
   letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.72);
@@ -976,7 +978,7 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   border-radius: var(--radius-pill);
   white-space: nowrap;
   outline: none;
-  transition: color 0.25s ease, font-weight 0.25s ease, padding 0.45s cubic-bezier(0.16, 1, 0.3, 1), font-size 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: color 0.25s ease, font-weight 0.25s ease, padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), font-size 0.4s cubic-bezier(0.16, 1, 0.3, 1), min-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .header-nav-link:hover {
@@ -1017,12 +1019,12 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 42px;
-  line-height: 42px;
+  height: 40px;
+  line-height: 40px;
   padding: 0 13px 0 18px;
   margin: 0 !important;
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--tp-dark-black-4);
@@ -1035,7 +1037,7 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   z-index: 1;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
-  transition: color 0.35s ease, border-color 0.35s ease;
+  transition: color 0.35s ease, border-color 0.35s ease, height 0.4s cubic-bezier(0.16, 1, 0.3, 1), line-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* White background pill by default */
@@ -1049,7 +1051,7 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   background-color: var(--primitive-white);
   border-radius: var(--radius-pill);
   z-index: -1;
-  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), height 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease;
 }
 
 .header-container .tp-btn-white span.text {
@@ -1079,8 +1081,8 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
 }
 
 .header-container .tp-btn-white:hover::after {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -1131,6 +1133,7 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
    -------------------------------------------------------------------------- */
 .header-area.is-scrolled {
   top: 0.75rem;
+  height: 48px;
 }
 
 .header-area.is-scrolled .header-container {
@@ -2141,29 +2144,30 @@ div.tp-theme-toggle-single .themepure-theme-toggle-input {
    -------------------------------------------------------------------------- */
 
 html[tp-theme=tp-theme-light] .tp-theme-toggle-main {
-  border: 1.5px solid #5a3bff;
+  border: 1.5px solid var(--tp-common-black-5, #171718);
   border-radius: 100px;
 }
 
+html[tp-theme=tp-theme-light] .tp-theme-toggle-main.light-active .tp-theme-toggle-light,
 html[tp-theme=tp-theme-light] .tp-theme-toggle-main.light-active #tp-theme-toggle-light {
   color: var(--tp-common-white);
 }
 
 html[tp-theme=tp-theme-light] .tp-theme-toggle-dark svg {
-  color: var(--tp-common-black-5-active);
+  color: var(--tp-common-black-5, #171718);
 }
 
 html[tp-theme=tp-theme-light] .tp-theme-toggle-slide {
   color: var(--tp-common-white);
-  background-color: var(--tp-common-black-5-active);
+  background-color: var(--tp-common-black-5, #171718);
 }
 
 html[tp-theme=tp-theme-light] #tp-theme-toggle-dark svg {
-  color: var(--tp-common-black);
+  color: var(--tp-common-black-5, #171718);
 }
 
 html[tp-theme=tp-theme-light] div.tp-theme-toggle-single #tp-theme-toggle-main {
-  border: 1px solid rgba(25, 37, 83, 0.1);
+  border: 1px solid rgba(23, 23, 24, 0.2);
 }
 /* <<< END 3-global/_theme-toggle.css <<< */
 /* >>> BEGIN 3-global/_buttons.css >>> */

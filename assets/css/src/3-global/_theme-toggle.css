@@ -262,27 +262,28 @@ div.tp-theme-toggle-single .themepure-theme-toggle-input {
    -------------------------------------------------------------------------- */
 
 html[tp-theme=tp-theme-light] .tp-theme-toggle-main {
-  border: 1.5px solid #5a3bff;
+  border: 1.5px solid var(--tp-common-black-5, #171718);
   border-radius: 100px;
 }
 
+html[tp-theme=tp-theme-light] .tp-theme-toggle-main.light-active .tp-theme-toggle-light,
 html[tp-theme=tp-theme-light] .tp-theme-toggle-main.light-active #tp-theme-toggle-light {
   color: var(--tp-common-white);
 }
 
 html[tp-theme=tp-theme-light] .tp-theme-toggle-dark svg {
-  color: var(--tp-common-black-5-active);
+  color: var(--tp-common-black-5, #171718);
 }
 
 html[tp-theme=tp-theme-light] .tp-theme-toggle-slide {
   color: var(--tp-common-white);
-  background-color: var(--tp-common-black-5-active);
+  background-color: var(--tp-common-black-5, #171718);
 }
 
 html[tp-theme=tp-theme-light] #tp-theme-toggle-dark svg {
-  color: var(--tp-common-black);
+  color: var(--tp-common-black-5, #171718);
 }
 
 html[tp-theme=tp-theme-light] div.tp-theme-toggle-single #tp-theme-toggle-main {
-  border: 1px solid rgba(25, 37, 83, 0.1);
+  border: 1px solid rgba(23, 23, 24, 0.2);
 }
