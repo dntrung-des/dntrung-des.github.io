@@ -366,6 +366,7 @@
   left: 0;
   opacity: 0;
   margin: -40px 0 0 -40px;
+  pointer-events: none;
 }
 
 .tp-portfolio-item-2 .tp-portfolio-view span {
@@ -458,6 +459,7 @@
   left: 0;
   opacity: 0;
   margin: -40px 0 0 -40px;
+  pointer-events: none;
 }
 
 .tp-portfolio-view-btn-3 span {

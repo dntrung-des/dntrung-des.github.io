@@ -14,6 +14,7 @@
 11. Section Border Scroll Animations
 12. Footer Mouse Move Interaction
 13. Cursor Tone Switcher (.cursor-style)
+14. Portfolio Hover Reveal Cursor Follow (.tp-portfolio-view-btn-3)
 ****************************************************/
 
 (function ($) {
@@ -771,6 +772,29 @@
 	$('.cursor-style').on("mouseleave", function () {
 		$('body').removeClass('cursor-white')
 	});
+
+	// 14. Portfolio Hover Reveal Cursor Follow (.tp-portfolio-view-btn-3, .tp-hover-reveal-text)
+	(function () {
+		var hoverItems = document.querySelectorAll('.tp-portfolio-item-3, .tp-hover-reveal-text, .tp-portfolio-item-2');
+		if (!hoverItems.length) return;
+
+		hoverItems.forEach(function (item) {
+			var btn = item.querySelector('.tp-portfolio-view-btn-3, .tp-portfolio-view') || (item.children[0] && item.children[0].querySelector('.tp-portfolio-view-btn-3, .tp-portfolio-view'));
+			if (!btn) return;
+
+			function updatePosition(e) {
+				var rect = item.getBoundingClientRect();
+				var scaleX = rect.width / (item.offsetWidth || rect.width);
+				var scaleY = rect.height / (item.offsetHeight || rect.height);
+				var x = (e.clientX - rect.left) / (scaleX || 1);
+				var y = (e.clientY - rect.top) / (scaleY || 1);
+				btn.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+			}
+
+			item.addEventListener('mouseenter', updatePosition);
+			item.addEventListener('mousemove', updatePosition);
+		});
+	})();
 
 	// Nice Select
 	if ($.fn.niceSelect) {
