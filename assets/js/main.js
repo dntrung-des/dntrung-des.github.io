@@ -84,8 +84,67 @@
 			var toggleBtn = document.querySelector('.header-mobile-toggle');
 			var mobileMenu = document.getElementById('header-mobile-menu');
 			var mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-cv-btn, .mobile-cta-btn');
+			var desktopNavLinks = document.querySelectorAll('.header-nav-link');
+			var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+			var aboutSection = document.getElementById('about');
+			var projectsSection = document.getElementById('projects') || document.querySelector('.tp-project-3__area');
+			var contactSection = document.getElementById('contact');
 			var lastScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
 			var scrollThreshold = 80;
+
+			function updateActiveNav() {
+				if (!aboutSection && !contactSection && !projectsSection) return;
+
+				var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+				var windowHeight = window.innerHeight;
+				var documentHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+				var activeSection = 'home';
+
+				var ctTop = contactSection ? contactSection.getBoundingClientRect().top : Infinity;
+				var prTop = projectsSection ? projectsSection.getBoundingClientRect().top : Infinity;
+				var abTop = aboutSection ? aboutSection.getBoundingClientRect().top : Infinity;
+
+				// If scrolled near page bottom or contact section reached top threshold
+				if (contactSection && (scrollPosition + windowHeight >= documentHeight - 120 || ctTop <= 250)) {
+					activeSection = 'contact';
+				} else if (projectsSection && prTop <= 250) {
+					activeSection = 'projects';
+				} else if (aboutSection && abTop <= 250) {
+					activeSection = 'about';
+				} else {
+					activeSection = 'home';
+				}
+
+				function syncLinks(links) {
+					links.forEach(function (link) {
+						var href = link.getAttribute('href') || '';
+						var text = link.textContent.trim().toLowerCase();
+						var li = link.closest('li');
+						var shouldBeActive = false;
+
+						if (activeSection === 'contact' && (href === '#contact' || href.endsWith('/#contact') || href.endsWith('#contact') || text === 'contact')) {
+							shouldBeActive = true;
+						} else if (activeSection === 'projects' && (href.includes('portfolio.html') || href === '#projects' || href.endsWith('/#projects') || text === 'projects')) {
+							shouldBeActive = true;
+						} else if (activeSection === 'about' && (href === '#about' || href.endsWith('/#about') || href.endsWith('#about') || text === 'about me')) {
+							shouldBeActive = true;
+						} else if (activeSection === 'home' && (href === '/' || href === '#' || href.endsWith('/index.html') || href === 'index.html' || text === 'home')) {
+							shouldBeActive = true;
+						}
+
+						if (shouldBeActive) {
+							link.classList.add('active');
+							if (li) li.classList.add('active');
+						} else {
+							link.classList.remove('active');
+							if (li) li.classList.remove('active');
+						}
+					});
+				}
+
+				syncLinks(desktopNavLinks);
+				syncLinks(mobileNavLinks);
+			}
 
 			function handleScroll() {
 				var currentScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
@@ -99,10 +158,41 @@
 					}
 				}
 				lastScrollY = currentScrollY;
+				updateActiveNav();
 			}
 
 			window.addEventListener('scroll', handleScroll, { passive: true });
 			handleScroll();
+
+			function setupScrollTriggerSync() {
+				if (window.ScrollTrigger) {
+					window.ScrollTrigger.create({
+						start: 0,
+						end: 'max',
+						onUpdate: handleScroll
+					});
+				} else {
+					setTimeout(setupScrollTriggerSync, 100);
+				}
+			}
+			setupScrollTriggerSync();
+
+			document.querySelectorAll('.header-nav-link, .mobile-nav-link').forEach(function (link) {
+				var href = link.getAttribute('href');
+				if (href && href.startsWith('#')) {
+					link.addEventListener('click', function (e) {
+						var target = document.querySelector(href);
+						if (target) {
+							e.preventDefault();
+							if (window.ScrollSmoother && window.ScrollSmoother.get()) {
+								window.ScrollSmoother.get().scrollTo(target, true, 'top top+=60');
+							} else {
+								target.scrollIntoView({ behavior: 'smooth' });
+							}
+						}
+					});
+				}
+			});
 
 			function closeMobileMenu() {
 				if (!header.classList.contains('is-menu-open')) return;
@@ -267,6 +357,14 @@
 		normalizeScroll: false,
 		ignoreMobileResize: true,
 	});
+
+	if (smoother && window.ScrollTrigger) {
+		ScrollTrigger.create({
+			onUpdate: function () {
+				window.dispatchEvent(new Event('scroll'));
+			}
+		});
+	}
 
 
 	/* services animation start */

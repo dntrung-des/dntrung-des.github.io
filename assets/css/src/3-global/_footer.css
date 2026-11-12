@@ -320,3 +320,23 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 .tp-copyright-3__social ul li:hover:last-child a {
   border-right: 1px solid rgba(231, 236, 255, 0.1);
 }
+
+/* --------------------------------------------------------------------------
+   Footer Light Theme Overrides
+   -------------------------------------------------------------------------- */
+html[tp-theme=tp-theme-light] .tp-footer-3__title,
+html[tp-theme=tp-theme-light] .tp-footer-3__title *,
+html[tp-theme="tp-theme-light"] .tp-footer-3__title,
+html[tp-theme="tp-theme-light"] .tp-footer-3__title * {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-footer-3__subtitle,
+html[tp-theme="tp-theme-light"] .tp-footer-3__subtitle {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-footer-3__subtitle::after,
+html[tp-theme="tp-theme-light"] .tp-footer-3__subtitle::after {
+  background-color: var(--tp-common-black-5);
+}

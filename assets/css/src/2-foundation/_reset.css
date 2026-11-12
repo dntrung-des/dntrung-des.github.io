@@ -65,20 +65,26 @@ button:focus {
    Selection Styles
    ------------------------------------------------------------------------ */
 *::-moz-selection {
-  background: var(--tp-common-black);
-  color: var(--tp-common-white);
+  background: #000000;
+  color: #ffffff;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: var(--tp-common-black);
-  color: var(--tp-common-white);
+  background: #000000;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+*::selection {
+  background: #000000;
+  color: #ffffff;
   text-shadow: none;
 }
 
 ::selection {
-  background: var(--tp-common-black);
-  color: var(--tp-common-white);
+  background: #000000;
+  color: #ffffff;
   text-shadow: none;
 }
 

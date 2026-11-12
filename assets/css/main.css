@@ -331,20 +331,26 @@ button:focus {
    Selection Styles
    ------------------------------------------------------------------------ */
 *::-moz-selection {
-  background: var(--tp-common-black);
-  color: var(--tp-common-white);
+  background: #000000;
+  color: #ffffff;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: var(--tp-common-black);
-  color: var(--tp-common-white);
+  background: #000000;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+*::selection {
+  background: #000000;
+  color: #ffffff;
   text-shadow: none;
 }
 
 ::selection {
-  background: var(--tp-common-black);
-  color: var(--tp-common-white);
+  background: #000000;
+  color: #ffffff;
   text-shadow: none;
 }
 
@@ -854,7 +860,7 @@ textarea {
 /* Full horizontal brand logo at top state */
 .header-logo-link .logo-main {
   display: block;
-  height: 38px;
+  height: 40px;
   width: auto;
   max-width: 160px;
   opacity: 1;
@@ -932,7 +938,7 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
 .header-zone-center {
   display: flex;
   align-items: center;
-  height: 44px;
+  height: 48px;
   background: rgba(15, 24, 62, 0.75);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -966,10 +972,10 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 38px;
-  padding: 6px 14px;
+  min-height: 42px;
+  padding: 7px 16px;
   font-family: var(--font-body);
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.72);
@@ -987,12 +993,14 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
 }
 
 /* Active navigation state: No underline, text highlighted with Primary accent color */
+.header-nav-item.active .header-nav-link,
 .header-nav-link.active {
   color: var(--color-accent) !important;
   font-weight: 600;
   background: transparent !important;
 }
 
+.header-nav-item.active .header-nav-link::after,
 .header-nav-link.active::after {
   display: none !important;
   content: none !important;
@@ -1019,12 +1027,12 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 13px 0 18px;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 14px 0 20px;
   margin: 0 !important;
   font-family: var(--font-body);
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--tp-dark-black-4);
@@ -1081,8 +1089,8 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
 }
 
 .header-container .tp-btn-white:hover::after {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
 }
 
@@ -1139,7 +1147,7 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
 .header-area.is-scrolled .header-container {
   max-width: 580px;
   height: 48px;
-  padding: 6px 6px;
+  padding: 4px 8px;
   background-color: rgba(11, 18, 47, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1161,7 +1169,9 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
 
 .header-area.is-scrolled .logo-icon {
   opacity: 1;
-  max-width: 34px;
+  max-width: 36px;
+  height: 36px;
+  width: 36px;
   visibility: visible;
   transform: scale(1);
   pointer-events: auto;
@@ -1172,8 +1182,8 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   opacity: 1;
   visibility: visible;
   max-width: 1px;
-  height: 22px;
-  margin: 0 8px;
+  height: 28px;
+  margin: 0 10px;
 }
 
 /* Center nav transparent inside compact dock */
@@ -1182,34 +1192,35 @@ html[tp-theme="tp-theme-light"] .header-logo-link .logo-main.logo-light {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-color: transparent;
+  border: none;
   box-shadow: none;
   padding: 0;
-  height: auto;
+  height: 40px;
 }
 
 .header-area.is-scrolled .header-nav-link {
-  min-height: 36px;
-  padding: 5px 11px;
-  font-size: 13.5px;
+  min-height: 40px;
+  padding: 6px 14px;
+  font-size: 14.5px;
 }
 
 /* Scrolled compact CTA button */
 .header-area.is-scrolled .header-container .tp-btn-white {
-  height: 36px;
-  line-height: 36px;
-  padding: 0 10px 0 14px;
-  font-size: 13px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 12px 0 16px;
+  font-size: 14px;
   box-shadow: none;
   margin-top: 0 !important;
 }
 
 .header-area.is-scrolled .header-container .tp-btn-white span.text {
-  margin-right: 16px;
+  margin-right: 18px;
 }
 
 .header-area.is-scrolled .header-container .tp-btn-white:hover::after {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -1435,12 +1446,14 @@ html[tp-theme=tp-theme-light] .header-nav-link:hover {
   color: var(--color-text-primary);
 }
 
+html[tp-theme=tp-theme-light] .header-nav-item.active .header-nav-link,
 html[tp-theme=tp-theme-light] .header-nav-link.active {
   color: var(--color-accent) !important;
   font-weight: 600;
   background: transparent !important;
 }
 
+html[tp-theme=tp-theme-light] .header-nav-item.active .header-nav-link::after,
 html[tp-theme=tp-theme-light] .header-nav-link.active::after {
   display: none !important;
   content: none !important;
@@ -1877,6 +1890,26 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 .tp-copyright-3__social ul li:hover:last-child a {
   border-right: 1px solid rgba(231, 236, 255, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   Footer Light Theme Overrides
+   -------------------------------------------------------------------------- */
+html[tp-theme=tp-theme-light] .tp-footer-3__title,
+html[tp-theme=tp-theme-light] .tp-footer-3__title *,
+html[tp-theme="tp-theme-light"] .tp-footer-3__title,
+html[tp-theme="tp-theme-light"] .tp-footer-3__title * {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-footer-3__subtitle,
+html[tp-theme="tp-theme-light"] .tp-footer-3__subtitle {
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-footer-3__subtitle::after,
+html[tp-theme="tp-theme-light"] .tp-footer-3__subtitle::after {
+  background-color: var(--tp-common-black-5);
 }
 /* <<< END 3-global/_footer.css <<< */
 /* >>> BEGIN 3-global/_theme-toggle.css >>> */
