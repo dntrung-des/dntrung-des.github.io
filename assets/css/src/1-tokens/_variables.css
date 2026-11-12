@@ -1,0 +1,42 @@
+/* ==========================================================================
+   1-tokens/_variables.css
+   Legacy Variable Bridges to Design System Semantic Tokens
+   Guarantees 100% backward compatibility for all existing components.
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Typography Token Bridges
+     ------------------------------------------------------------------------ */
+  --tp-ff-body: var(--font-body);
+  --tp-ff-heading: var(--font-display);
+  --tp-ff-p: var(--font-body);
+  --tp-ff-dmsans: var(--font-body);
+  --tp-ff-didone: var(--font-display);
+  --tp-ff-didoneright: var(--font-display);
+  --tp-ff-garamond: var(--font-editorial);
+  --tp-ff-abril: var(--font-decorative);
+  --tp-ff-fontawesome: var(--font-icon);
+
+  /* ------------------------------------------------------------------------
+     Color Token Bridges
+     ------------------------------------------------------------------------ */
+  --tp-common-white: #ffffff;
+  --tp-common-white-3: #F0F0F6;
+  --tp-common-black: var(--color-canvas);
+  --tp-common-black-5: #171718;
+  --tp-common-black-5-active: var(--color-accent-active);
+  --tp-common-black-6: #192553;
+
+  /* Dark Background Surfaces */
+  --tp-dark-black-3: var(--color-surface-subtle);
+  --tp-dark-black-4: var(--color-surface-elevated);
+
+  /* Brand & Accents */
+  --tp-theme-primary: var(--color-accent);
+
+  /* Text & Headings */
+  --tp-headingDark-primary: var(--color-text-inverse);
+  --tp-text-body: var(--color-text-secondary);
+  --tp-text-1: var(--color-text-muted);
+}

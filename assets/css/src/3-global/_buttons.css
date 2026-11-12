@@ -1,0 +1,412 @@
+/* ==========================================================================
+   3-global/_buttons.css
+   Active Global Button Components (.tp-btn, .tp-btn-white, .tp-btn-blue,
+   .tp-btn-border-sm, .tp-btn-border-md, .tp-btn-pink-large, .tp-btn-black-lg)
+   ========================================================================== */
+
+/* Button Transitions */
+.tp-btn-black-lg span,
+.tp-btn-white span.text::after,
+.tp-btn-white::after,
+.tp-btn-blue span.text::after,
+.tp-btn-blue::after,
+.back-to-top-wrapper,
+.transition-3 {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* Button SVG Vertical Alignment */
+.tp-btn svg,
+.tp-btn-border-md span svg {
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+/* Base Button (tp-btn) */
+.tp-btn {
+  display: inline-block;
+  font-family: var(--tp-ff-jost);
+  font-weight: 400;
+  font-size: 16px;
+  background-color: var(--tp-common-black);
+  padding: 9px 26px;
+  color: var(--tp-common-white);
+  border: 1px solid var(--tp-common-black);
+}
+
+.tp-btn:hover {
+  color: var(--tp-common-black);
+  background-color: transparent;
+}
+
+/* Pink Large Pill Button (tp-btn-pink-large) */
+.tp-btn-pink-large {
+  height: 54px;
+  line-height: 54px;
+  border-radius: 100px;
+  padding: 0 115px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+  color: var(--tp-common-white);
+  background-color: var(--tp-theme-primary);
+  font-family: var(--tp-ff-dmsans);
+  transition: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-btn-pink-large {
+    padding: 0px 30px;
+  }
+}
+
+.tp-btn-pink-large span svg {
+  margin-right: 7px;
+}
+
+.tp-btn-pink-large span[data-hover] {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.tp-btn-pink-large span[data-hover]::after {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  content: attr(data-hover);
+  text-align: center;
+}
+
+.tp-btn-pink-large:hover {
+  color: var(--tp-common-white);
+}
+
+.tp-btn-pink-large:hover span[data-hover] {
+  transform: translateY(-100%);
+  transform-origin: 0% 0%;
+}
+
+/* Black Large Pill Button (tp-btn-black-lg) */
+.tp-btn-black-lg {
+  height: 50px;
+  line-height: 50px;
+  border-radius: 100px;
+  padding: 0 80px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+  color: var(--tp-common-black);
+  background-color: var(--tp-common-white);
+  font-family: var(--tp-ff-dmsans);
+  transition: 0.4s;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-btn-black-lg {
+    padding: 0 50px;
+    font-size: 18px;
+  }
+}
+
+.tp-btn-black-lg span {
+  margin-left: 10px;
+  -webkit-transform: translate(0, 1px);
+  -moz-transform: translate(0, 1px);
+  -ms-transform: translate(0, 1px);
+  -o-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+  display: inline-block;
+}
+
+.tp-btn-black-lg:hover {
+  color: var(--tp-common-black);
+}
+
+.tp-btn-black-lg:hover span {
+  -webkit-transform: translate(6px, 1px);
+  -moz-transform: translate(6px, 1px);
+  -ms-transform: translate(6px, 1px);
+  -o-transform: translate(6px, 1px);
+  transform: translate(6px, 1px);
+}
+
+/* White Pill Button (tp-btn-white) */
+.tp-btn-white {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100px;
+  padding: 0 16px;
+  padding-right: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+  color: var(--tp-common-black-5-active);
+  background-color: transparent;
+  font-family: var(--tp-ff-dmsans);
+  transition: 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.tp-btn-white span {
+  margin-left: 30px;
+}
+
+.tp-btn-white span svg {
+  color: var(--tp-common-black);
+}
+
+.tp-btn-white span.text {
+  position: relative;
+  margin-left: 0;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.tp-btn-white span.text::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--tp-common-white);
+  z-index: -1;
+}
+
+.tp-btn-white::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tp-common-white);
+  z-index: -1;
+  border-radius: 100px;
+}
+
+.tp-btn-white:hover {
+  background-color: transparent;
+  color: var(--tp-common-white);
+}
+
+.tp-btn-white:hover::after {
+  width: 40px;
+}
+
+/* Blue Pill Button (tp-btn-blue) */
+.tp-btn-blue {
+  height: 64px;
+  line-height: 64px;
+  border-radius: 100px;
+  padding: 0 37px;
+  padding-right: 27px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+  color: var(--tp-common-white);
+  background-color: transparent;
+  font-family: var(--tp-ff-dmsans);
+  transition: 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.tp-btn-blue span.text {
+  position: relative;
+}
+
+.tp-btn-blue span.text::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--tp-common-white);
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+
+.tp-btn-blue span.icon {
+  margin-left: 50px;
+}
+
+.tp-btn-blue::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tp-theme-primary);
+  z-index: -1;
+  border-radius: 100px;
+  transition: width 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.tp-btn-blue:hover {
+  background-color: transparent;
+  color: var(--tp-common-white);
+}
+
+.tp-btn-blue:hover::after {
+  width: 64px;
+}
+
+/* Border Medium Pill Button (tp-btn-border-md) */
+.tp-btn-border-md {
+  height: 46px;
+  line-height: 44px;
+  border-radius: 100px;
+  padding: 0 30px;
+  padding-right: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+  color: var(--tp-common-white);
+  font-family: var(--tp-ff-dmsans);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+
+.tp-btn-border-md span {
+  margin-left: 29px;
+}
+
+.tp-btn-border-md:hover {
+  background-color: var(--tp-common-white);
+  border-color: var(--tp-common-white);
+  color: var(--tp-common-black);
+}
+
+/* Border Small Pill Button (tp-btn-border-sm) */
+.tp-btn-border-sm {
+  height: 64px;
+  line-height: 64px;
+  /* height: 50px;
+  line-height: 48px; */
+  border-radius: 100px;
+  padding: 0px 37px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+  color: var(--tp-common-white);
+  font-family: var(--tp-ff-dmsans);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.tp-btn-border-sm span {
+  margin-left: 15px;
+  transform: translateY(-2px);
+  display: inline-block;
+}
+.tp-btn-border-sm:hover span svg {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease-in-out;
+  /* transform-origin: center; */
+
+}
+
+.tp-btn-border-sm:hover {
+  background-color: var(--tp-common-white);
+  border-color: var(--tp-common-white);
+  color: var(--tp-common-black);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons Light Theme Overrides
+   -------------------------------------------------------------------------- */
+
+html[tp-theme=tp-theme-light] .tp-btn-blue span.text::after {
+  background-color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-btn-white span.text::after {
+  background-color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .tp-btn-white::after {
+  background-color: var(--tp-common-black-5-active);
+}
+
+html[tp-theme=tp-theme-light] .tp-btn-white {
+  color: var(--tp-common-white);
+  box-shadow: inherit;
+}
+
+html[tp-theme=tp-theme-light] .tp-btn-white span svg {
+  color: var(--tp-common-white);
+}
+
+html[tp-theme=tp-theme-light] .tp-btn-white:hover {
+  color: var(--tp-common-black-6);
+}
+
+html[tp-theme=tp-theme-light] .tp-btn-white:hover span svg {
+  color: var(--tp-common-white);
+}
+
+html[tp-theme=tp-theme-light] .tp-btn-blue:hover {
+  background-color: transparent;
+  color: var(--tp-common-black-5);
+}
+
+html[tp-theme=tp-theme-light] .ab-hero__btn-box .tp-btn-border-sm {
+  color: var(--tp-common-white);
+  background-color: var(--tp-common-black-5);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+html[tp-theme=tp-theme-light] .porfolio-details__right-btn .tp-btn-border-md {
+  color: var(--tp-common-black-5);
+  border: 1.5px solid rgba(0, 19, 47, 0.1);
+}
+
+html[tp-theme=tp-theme-light] .porfolio-details__right-btn .tp-btn-border-md:hover {
+  background-color: var(--tp-common-black-5);
+  color: var(--tp-common-white);
+}
+
+html[tp-theme=tp-theme-light] .blog-list__btn .tp-btn-black-lg {
+  background-color: #10193F;
+  color: var(--tp-common-white);
+}

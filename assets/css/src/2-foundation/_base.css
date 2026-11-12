@@ -1,0 +1,136 @@
+/* ==========================================================================
+   2-foundation/_base.css
+   Global Typography Defaults, Headings, Paragraphs, and Base Form Controls
+   ========================================================================== */
+
+body {
+  font-family: var(--tp-ff-body);
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--tp-text-body);
+  line-height: 26px;
+  background-color: var(--tp-common-black);
+}
+
+/* ------------------------------------------------------------------------
+   Headings
+   ------------------------------------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--tp-ff-heading);
+  color: var(--tp-headingDark-primary);
+  margin-top: 0px;
+  font-weight: 500;
+  line-height: 1.2;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------------------------
+   Paragraphs & Text Helpers
+   ------------------------------------------------------------------------ */
+p {
+  font-family: var(--tp-ff-p);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--tp-text-body);
+  margin-bottom: 15px;
+  line-height: 26px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* ------------------------------------------------------------------------
+   Base Form Controls (Inputs & Textareas)
+   ------------------------------------------------------------------------ */
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+input[type=url],
+textarea {
+  outline: none;
+  background-color: #fff;
+  height: 56px;
+  width: 100%;
+  line-height: 56px;
+  font-size: 14px;
+  color: var(--tp-common-black);
+  padding-left: 26px;
+  padding-right: 26px;
+  border: 1px solid #E0E2E3;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=tel]::placeholder,
+input[type=number]::placeholder,
+input[type=password]::placeholder,
+input[type=url]::placeholder,
+textarea::placeholder {
+  color: #95999D;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=url]:focus,
+textarea:focus {
+  border-color: var(--tp-common-black);
+}
+
+input[type=text]:focus::placeholder,
+input[type=email]:focus::placeholder,
+input[type=tel]:focus::placeholder,
+input[type=number]:focus::placeholder,
+input[type=password]:focus::placeholder,
+input[type=url]:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0;
+}
+
+textarea {
+  line-height: 1.4;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}

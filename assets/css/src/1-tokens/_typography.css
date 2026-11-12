@@ -1,0 +1,47 @@
+/* ==========================================================================
+   1-tokens/_typography.css
+   Design System Semantic Typography Tokens & Proportional Type Scale
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Semantic Font Families
+     ------------------------------------------------------------------------ */
+  --font-display: 'Didone right', 'Didone', serif;
+  --font-editorial: 'EB Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-decorative: 'Abril Fatface', cursive;
+  --font-icon: "Font Awesome 6 Pro", "Font Awesome 6 Brands";
+
+  /* ------------------------------------------------------------------------
+     Type Scale Reference
+     ------------------------------------------------------------------------ */
+  --font-size-display: 133px;
+  --font-size-h1: 80px;
+  --font-size-h2: 40px;
+  --font-size-h3: 30px;
+  --font-size-h4: 24px;
+  --font-size-body-lg: 18px;
+  --font-size-body: 16px;
+  --font-size-body-sm: 14px;
+  --font-size-caption: 12px;
+
+  /* ------------------------------------------------------------------------
+     Font Weights
+     ------------------------------------------------------------------------ */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+
+  /* ------------------------------------------------------------------------
+     Line Heights
+     ------------------------------------------------------------------------ */
+  --line-height-reset: 1;
+  --line-height-tight: 1.05;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+  --line-height-loose: 1.8;
+}
