@@ -117,16 +117,21 @@
 
          <!-- Right Zone: CTA & Mobile Toggle -->
          <div class="header-zone-right">
-            <a class="tp-btn-white mt-2 header-cv-cta" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
+            <a class="tp-btn-white mt-2 header-cv-cta" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank"
+               rel="noopener noreferrer" download aria-label="Download CV">
                <span class="text">CV</span>
-               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                  <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor"
+                     stroke-width="1.5" stroke-linecap="round"></path>
+                  <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5"
+                     stroke-linecap="round" stroke-linejoin="round"></path>
                </svg>
             </a>
 
             <!-- Mobile Menu Toggle Button -->
-            <button type="button" class="header-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="header-mobile-menu">
+            <button type="button" class="header-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+               aria-controls="header-mobile-menu">
                <span class="hamburger-line line-1"></span>
                <span class="hamburger-line line-2"></span>
                <span class="hamburger-line line-3"></span>
@@ -144,11 +149,15 @@
                <li class="mobile-nav-item"><a href="/#contact" class="mobile-nav-link">Contact</a></li>
             </ul>
             <div class="mobile-nav-cta">
-               <a class="tp-btn-white mobile-cv-btn" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download CV">
+               <a class="tp-btn-white mobile-cv-btn" href="/assets/CV/CV_UIUX Design_Trung.pdf" target="_blank"
+                  rel="noopener noreferrer" download aria-label="Download CV">
                   <span class="text">CV</span>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                     <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                     <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+                     <path d="M1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round"></path>
+                     <path d="M8 1L8 9.75M8 9.75L10.625 7.125M8 9.75L5.375 7.125" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                </a>
             </div>
@@ -172,9 +181,10 @@
                   </div>
                   <div class="row">
                      <div class="col-xl-12">
-                        <div class="blog-list__tab-wrap">
+                        <div class="blog-list__tab-wrap" id="portfolioTabWrap">
                            <!-- Tabs -->
-                           <div class="blog-list__tab-btn">
+                           <div
+                              class="blog-list__tab-btn d-flex align-items-center justify-content-between flex-wrap gap-3">
                               <ul class="nav nav-tab" id="myTab" role="tablist">
                                  <li class="nav-item" role="presentation">
                                     <button class="nav-links active" id="All-tab" data-bs-toggle="tab"
@@ -184,15 +194,14 @@
                                  <li class="nav-item" role="presentation">
                                     <button class="nav-links" id="Uxui-tab" data-bs-toggle="tab"
                                        data-bs-target="#Uxui-tab-pane" type="button" role="tab"
-                                       aria-controls="Uxui-tab-pane"
-                                       aria-selected="false"><span>UX/UI</span>[4+]
+                                       aria-controls="Uxui-tab-pane" aria-selected="false"><span>UX/UI</span>[4+]
                                     </button>
                                  </li>
                                  <li class="nav-item" role="presentation">
                                     <button class="nav-links" id="Logo-branding-tab" data-bs-toggle="tab"
                                        data-bs-target="#Logo-branding-tab-pane" type="button" role="tab"
-                                       aria-controls="Logo-branding-tab-pane"
-                                       aria-selected="false"><span>Logo - Branding</span>[6+]
+                                       aria-controls="Logo-branding-tab-pane" aria-selected="false"><span>Logo -
+                                          Branding</span>[6+]
                                     </button>
                                  </li>
                                  <li class="nav-item" role="presentation">
@@ -203,6 +212,36 @@
                                     </button>
                                  </li>
                               </ul>
+
+                              <!-- Portfolio View Switcher -->
+                              <div class="portfolio-view-switcher d-flex align-items-center mb-15">
+                                 <span class="portfolio-view-label" id="portfolioViewLabel">Gallery View</span>
+                                 <div class="portfolio-view-control-group d-inline-flex align-items-center" role="group"
+                                    aria-label="View Switcher">
+                                    <button type="button" class="portfolio-view-btn active" id="viewGalleryBtn"
+                                       data-view="gallery" title="Gallery View" aria-label="Gallery View">
+                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <rect x="1.5" y="1.5" width="6" height="6" rx="1.5" stroke="currentColor"
+                                             stroke-width="1.6" />
+                                          <rect x="10.5" y="1.5" width="6" height="6" rx="1.5" stroke="currentColor"
+                                             stroke-width="1.6" />
+                                          <rect x="1.5" y="10.5" width="6" height="6" rx="1.5" stroke="currentColor"
+                                             stroke-width="1.6" />
+                                          <rect x="10.5" y="10.5" width="6" height="6" rx="1.5" stroke="currentColor"
+                                             stroke-width="1.6" />
+                                       </svg>
+                                    </button>
+                                    <button type="button" class="portfolio-view-btn" id="viewListBtn" data-view="list"
+                                       title="List View" aria-label="List View">
+                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M2 4.5H16M2 9H16M2 13.5H16" stroke="currentColor" stroke-width="1.8"
+                                             stroke-linecap="round" />
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
                            </div>
                            <!--End Tabs -->
                            <div class="tab-content" id="myTabContent">
@@ -213,24 +252,27 @@
                                     <!-- Logo Maker – Mobile App UI & Visual Design -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a href="https://www.behance.net/gallery/234249983/Logo-Maker-Mobile-App-UI-Case-Study" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/234249983/Logo-Maker-Mobile-App-UI-Case-Study"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="/assets/img/portfolio/details/2/logomaker.webp"
-                                                         alt="">
+                                                      <img src="/assets/img/portfolio/details/2/logomaker.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>UX/UI Design</span>
-                                                   <span>Figma, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UX/UI Design</span>
+                                                      <span>Figma, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">
-                                                    Logo Maker – Mobile App UI
+                                                      Logo Maker – Mobile App UI
                                                    </h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">01</span>
@@ -258,23 +300,24 @@
                                     <!--App Store Visual Design – Icon & Screenshot for ASO -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="/portfolio/2/app-visual-assets.html" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="/portfolio/2/app-visual-assets.html" target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/details/2/2/c.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/details/2/2/c.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/details/2/2/c.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View<br> details</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>Visual</span>
-                                                   <span>Figma, Photoshop, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Visual</span>
+                                                      <span>Figma, Photoshop, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">
                                                       App Store Visual Design – Icon & Screenshot for ASO
                                                    </h3>
@@ -304,23 +347,26 @@
                                     <!-- Skyways Airlines App UX/UI Design -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a href="https://www.behance.net/gallery/222692507/Skyways-Airlines-App-UXUI-Design" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/222692507/Skyways-Airlines-App-UXUI-Design"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/ui_skyways.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/ui_skyways.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>UX/UI Design</span>
-                                                   <span>Figma</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UX/UI Design</span>
+                                                      <span>Figma</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Skyways Airlines App UX/UI Design</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">03</span>
@@ -348,23 +394,26 @@
                                     <!-- DJ Music Mixer UI Design -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a href="https://www.behance.net/gallery/245294877/DJ-Music-Mixer-UI" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/245294877/DJ-Music-Mixer-UI"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_dj_mixer.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/bd_dj_mixer.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/bd_dj_mixer.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>UX/UI Design</span>
-                                                   <span>Figma</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UX/UI Design</span>
+                                                      <span>Figma</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">DJ Music Mixer UI Design</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">03</span>
@@ -392,23 +441,25 @@
                                     <!-- portfolio item -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="https://www.behance.net/gallery/221676753/SKYWAYS-AIRLINE-BRAND-IDENTITY" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/221676753/SKYWAYS-AIRLINE-BRAND-IDENTITY"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/bd_skyways.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/bd_skyways.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>Branding</span>
-                                                   <span>Photoshop, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Branding</span>
+                                                      <span>Photoshop, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Skyways Airlines Brand Identity</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">04</span>
@@ -437,23 +488,25 @@
                                     <!-- Quang Noodle Restaurant Website item -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
+                                          <div class="tp-portfolio-item mb-50">
                                              <a href="https://youtu.be/X7CEoBDfQoU" target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85"
-                                                         src="assets/img/portfolio/3/dev_web_quang.webp" alt="">
+                                                      <img src="assets/img/portfolio/3/icv_miquang_web.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>Watch on<br> YouTube</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>Website</span>
-                                                   <span>Laravel</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Website</span>
+                                                      <span>Laravel</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Quang Noodle Restaurant Website</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">05</span>
@@ -481,23 +534,25 @@
                                     <!-- portfolio item -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="https://www.behance.net/gallery/203347605/Harmony-Coffee-Brand-Identity" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/203347605/Harmony-Coffee-Brand-Identity"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_harmony.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/bd_harmony.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/bd_harmony.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>Branding</span>
-                                                   <span>Photoshop, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Branding</span>
+                                                      <span>Photoshop, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Harmony Coffee Brand Identity</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">06</span>
@@ -526,24 +581,26 @@
                                     <!-- Quang Noodle Restaurant Application UI Design item -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="https://www.behance.net/gallery/221677039/Quang-Noodle-Restaurant-Application-UI" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/221677039/Quang-Noodle-Restaurant-Application-UI"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_harmony.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/ui_noodles.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/ui_noodles.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>UI Design</span>
-
-                                                   <span>Figma, Photoshop</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UI Design</span>
+
+                                                      <span>Figma, Photoshop</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Quang Noodle Restaurant Application UI
                                                       Design</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
@@ -573,23 +630,25 @@
                                     <!-- Quang Noodle Restaurant Application item -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
+                                          <div class="tp-portfolio-item mb-50">
                                              <a href="https://www.youtube.com/watch?v=shEaTWJ-LMo" target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85"
-                                                         src="assets/img/portfolio/3/dev_app_quang.jpg" alt="">
+                                                      <img src="assets/img/portfolio/3/icv_miquang_app.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>Watch on<br> YouTube</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>Application</span>
-                                                   <span>Kotlin</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Application</span>
+                                                      <span>Kotlin</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Quang Noodle Restaurant Application
                                                    </h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
@@ -618,7 +677,8 @@
 
                                  </div>
                                  <div class="blog-list__btn text-center">
-                                    <a class="tp-btn-black-lg" href="https://www.behance.net/dntrung044" target="_blank">
+                                    <a class="tp-btn-black-lg" href="https://www.behance.net/dntrung044"
+                                       target="_blank">
                                        Explore more on Behance
                                        <span>
                                           <i class="fa-sharp fa-regular fa-arrow-right"></i>
@@ -628,29 +688,33 @@
                               </div>
 
                               <!------------------------ Ux ui pane---------------------->
-                              <div class="tab-pane fade" id="Uxui-tab-pane" role="tabpanel" aria-labelledby="Uxui-tab" tabindex="0">
+                              <div class="tab-pane fade" id="Uxui-tab-pane" role="tabpanel" aria-labelledby="Uxui-tab"
+                                 tabindex="0">
                                  <div class="row gx-50">
                                     <!-- Logo Maker – Mobile App UI & Visual Design -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a href="https://www.behance.net/gallery/234249983/Logo-Maker-Mobile-App-UI-Case-Study" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/234249983/Logo-Maker-Mobile-App-UI-Case-Study"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="/assets/img/portfolio/details/2/logomaker.webp"
-                                                         alt="">
+                                                      <img src="/assets/img/portfolio/details/2/logomaker.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>UX/UI Design</span>
-                                                   <span>Figma, Photoshop, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UX/UI Design</span>
+                                                      <span>Figma, Photoshop, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">
-                                                    Logo Maker – Mobile App UI & Visual Design
+                                                      Logo Maker – Mobile App UI & Visual Design
                                                    </h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">01</span>
@@ -675,26 +739,29 @@
                                           </div>
                                        </div>
                                     </div>
-                                      <!-- DJ Music Mixer UI Design -->
+                                    <!-- DJ Music Mixer UI Design -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a href="https://www.behance.net/gallery/245294877/DJ-Music-Mixer-UI" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/245294877/DJ-Music-Mixer-UI"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_dj_mixer.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/bd_dj_mixer.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/bd_dj_mixer.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>UX/UI Design</span>
-                                                   <span>Figma</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UX/UI Design</span>
+                                                      <span>Figma</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">DJ Music Mixer UI Design</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">03</span>
@@ -722,23 +789,24 @@
                                     <!--App Store Visual Design – Icon & Screenshot for ASO -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="/portfolio/2/app-visual-assets.html" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="/portfolio/2/app-visual-assets.html" target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/details/2/2/c.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/details/2/2/c.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/details/2/2/c.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View<br> details</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>Visual</span>
-                                                   <span>Figma, Photoshop, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Visual</span>
+                                                      <span>Figma, Photoshop, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">
                                                       App Store Visual Design – Icon & Screenshot for ASO
                                                    </h3>
@@ -765,27 +833,31 @@
                                           </div>
                                        </div>
                                     </div>
-                                    <!-- Skyways Airlines Application UX/UI Design --> 
+                                    <!-- Skyways Airlines Application UX/UI Design -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a href="https://www.behance.net/gallery/222692507/Skyways-Airlines-Airline-Mobile-App-Design" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/222692507/Skyways-Airlines-Airline-Mobile-App-Design"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/ui_skyways.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/ui_skyways.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>UX/UI Design</span>
-                                                   <span>Figma</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
-                                                   <h3 class="tp-portfolio-title">Skyways Airlines Application UX/UI Design</h3>
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UX/UI Design</span>
+                                                      <span>Figma</span>
+                                                   </div>
+                                                   <h3 class="tp-portfolio-title">Skyways Airlines Application UX/UI
+                                                      Design</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">03</span>
                                                       <span class="tp-portfolio-meta-arrow">
@@ -812,24 +884,26 @@
                                     <!-- Quang Noodle Restaurant Application UI Design -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="https://www.behance.net/gallery/221677039/Quang-Noodle-Restaurant-Application-UI" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/221677039/Quang-Noodle-Restaurant-Application-UI"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_harmony.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/ui_noodles.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/ui_noodles.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>UI Design</span>
-
-                                                   <span>Figma, Photoshop</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>UI Design</span>
+
+                                                      <span>Figma, Photoshop</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">
                                                       Quang Noodle Restaurant Application UI Design
                                                    </h3>
@@ -856,33 +930,36 @@
                                           </div>
                                        </div>
                                     </div>
-                                    
+
                                  </div>
                               </div>
 
                               <!------------------------ Logo branding pane------------------------>
-                              <div class="tab-pane fade" id="Logo-branding-tab-pane" role="tabpanel" aria-labelledby="Logo-branding-tab" tabindex="0">
+                              <div class="tab-pane fade" id="Logo-branding-tab-pane" role="tabpanel"
+                                 aria-labelledby="Logo-branding-tab" tabindex="0">
                                  <div class="row gx-50">
                                     <!-- Skyways Airlines Brand Identit -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="https://www.behance.net/gallery/221676753/SKYWAYS-AIRLINE-BRAND-IDENTITY" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/221676753/SKYWAYS-AIRLINE-BRAND-IDENTITY"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/bd_skyways.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/bd_skyways.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>Branding</span>
-                                                   <span>Photoshop, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Branding</span>
+                                                      <span>Photoshop, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Skyways Airlines Brand Identity</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">01</span>
@@ -906,27 +983,29 @@
                                              </a>
                                           </div>
                                        </div>
-                                    </div> 
+                                    </div>
                                     <!-- Harmony Coffee Brand Identity -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="https://www.behance.net/gallery/203347605/Harmony-Coffee-Brand-Identity" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/203347605/Harmony-Coffee-Brand-Identity"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_harmony.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="assets/img/portfolio/3/bd_harmony.webp"
-                                                         alt="">
+                                                      <img src="assets/img/portfolio/3/bd_harmony.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>Branding</span>
-                                                   <span>Photoshop, Illustrator</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Branding</span>
+                                                      <span>Photoshop, Illustrator</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Harmony Coffee Brand Identity</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">02</span>
@@ -950,28 +1029,30 @@
                                              </a>
                                           </div>
                                        </div>
-                                    </div> 
+                                    </div>
                                     <!-- 3. Holiday/Event Posters-->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
-                                             <a
-                                                href="https://www.behance.net/gallery/201909047/Book-Cover-C-Di-Ri-S-Dn" target="_blank">
+                                          <div class="tp-portfolio-item mb-50">
+                                             <a href="https://www.behance.net/gallery/201909047/Book-Cover-C-Di-Ri-S-Dn"
+                                                target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/bd_harmony.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85" src="/assets/img/portfolio/bookcover.webp"
-                                                         alt="">
+                                                      <img src="/assets/img/portfolio/bookcover.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>View on<br> Behance</span>
                                                    </div>
                                                 </div>
-                                                <div class="blog-list__sm-category">
-                                                   <span>Branding</span>
-
-                                                   <span>Illustrator, Photoshop</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Branding</span>
+
+                                                      <span>Illustrator, Photoshop</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">
                                                       Book Cover "Cứ Đi Rồi Sẽ Đến"
                                                    </h3>
@@ -1008,24 +1089,26 @@
                                     <!-- Quang Noodle Restaurant Website item -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
+                                          <div class="tp-portfolio-item mb-50">
                                              <a href="https://youtu.be/X7CEoBDfQoU" target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="/assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85"
-                                                         src="assets/img/portfolio/3/dev_web_quang.webp" alt="">
+                                                      <img src="assets/img/portfolio/3/icv_miquang_web.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>Watch on<br> YouTube</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>Dev</span>
-                                                   <span>Website</span>
-                                                   <span>Laravel</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Dev</span>
+                                                      <span>Website</span>
+                                                      <span>Laravel</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Quang Noodle Restaurant Website</h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
                                                       <span class="tp-portfolio-meta-count">01</span>
@@ -1054,24 +1137,26 @@
                                     <!-- Quang Noodle Restaurant Application item -->
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                        <div class="tp-portfolio-item-wrapper">
-                                          <div class="tp-portfolio-item mb-70">
+                                          <div class="tp-portfolio-item mb-50">
                                              <a href="https://www.youtube.com/watch?v=shEaTWJ-LMo" target="_blank">
                                                 <div class="tp-portfolio-thumb img-4 w-img fix ">
                                                    <div class="tp-portfolio-thumb-img include-bg d-none"
                                                       data-background="assets/img/portfolio/3/ui_skyways.webp"></div>
 
                                                    <div class="tp-portfolio-thumb-img">
-                                                      <img data-speed="0.85"
-                                                         src="assets/img/portfolio/3/dev_app_quang.jpg" alt="">
+                                                      <img src="assets/img/portfolio/3/icv_miquang_app.webp" alt="">
+                                                   </div>
+                                                   <div class="tp-portfolio-view-btn-3">
+                                                      <span>Watch on<br> YouTube</span>
                                                    </div>
                                                 </div>
-                                                <!-- Tags -->
-                                                <div class="blog-list__sm-category">
-                                                   <span>Dev</span>
-                                                   <span>Application</span>
-                                                   <span>Kotlin</span>
-                                                </div>
                                                 <div class="tp-portfolio-content">
+                                                   <!-- Tags -->
+                                                   <div class="blog-list__sm-category">
+                                                      <span>Dev</span>
+                                                      <span>Application</span>
+                                                      <span>Kotlin</span>
+                                                   </div>
                                                    <h3 class="tp-portfolio-title">Quang Noodle Restaurant Application
                                                    </h3>
                                                    <div class="tp-portfolio-meta d-flex align-items-center">
@@ -1118,15 +1203,15 @@
                   <img src="/assets/img/footer/footer-shape.png" alt="">
                </div>
                <!-- <div class="tp-footer-3__img">
-                 <img src="/assets/img/footer/footer-3-1.png" alt="">
-             </div> -->
+                    <img src="/assets/img/footer/footer-3-1.png" alt="">
+                </div> -->
                <div class="tp-footer-3__area pt-120 pb-120">
                   <div class="container">
                      <div class="row align-items-center">
                         <div class="col-xl-12">
                            <div class="tp-footer-3__title-box">
                               <span class="tp-footer-3__subtitle">Contact Me</span>
-                              <h3 class="tp-footer-3__title tp_title_anim">Let's work Together</h3>
+                              <h3 class="tp-footer-3__title tp_title_anim">Let's Work Together</h3>
                            </div>
                            <div class="tp-contact-2__top-info mb-80 d-flex align-items-center justify-content-center">
                               <div class="parallax-wrap">
@@ -1165,20 +1250,14 @@
                                           </div>
                                           <div class="col-xl-4 col-lg-4 mb-50">
                                              <div class="tp-contact-2__select">
-                                                <select class="input-field" style="display: none;">
-                                                   <option>Subject (optional)</option>
-                                                   <option>Greeting</option>
-                                                   <option>Recruitment</option>
+                                                <select class="input-field" name="subject" id="contact-subject"
+                                                   aria-label="Subject (optional)">
+                                                   <option value="">Subject (optional)</option>
+                                                   <option value="Greeting">Greeting</option>
+                                                   <option value="Recruitment">Recruitment</option>
+                                                   <option value="Project Inquiry">Project Inquiry</option>
+                                                   <option value="Other">Other</option>
                                                 </select>
-                                                <div class="nice-select input-field" tabindex="0">
-                                                   <span class="current">Subject (optional)</span>
-                                                   <ul class="list">
-                                                      <li data-value="Subject (optional)" class="option selected focus">
-                                                         Subject (optional)</li>
-                                                      <li data-value="Greeting" class="option">Greeting</li>
-                                                      <li data-value="Recruitment" class="option">Recruitment</li>
-                                                   </ul>
-                                                </div>
                                                 <span class="focus-border"></span>
                                              </div>
                                           </div>
@@ -1223,14 +1302,15 @@
                            <div class="col-xl-9 col-lg-9 col-md-9 d-none d-md-block">
                               <div class="tp-copyright-3__social text-end">
                                  <ul>
-                                    <li><a href="https://facebook.com/dntrung0444" target="_blank"><i
-                                             class="fa-brands fa-facebook-f"></i>Facebook</a></li>
-                                    <li><a href="https://youtube.com/@dntrung044" target="_blank"><i
-                                             class="fa-brands fa-youtube"></i>Youtube</a></li>
+                                    <!-- <li><a href="https://facebook.com/dntrung0444" target="_blank"><i
+                                             class="fa-brands fa-facebook-f"></i>Facebook</a></li> -->
+
                                     <li><a href="https://behance.net/dntrung044" target="_blank"><i
                                              class="fa-brands fa-behance"></i>Behance</a></li>
                                     <li><a href="https://github.com/dntrung044" target="_blank"><i
                                              class="fa-brands fa-github"></i>Github</a></li>
+                                    <li><a href="https://youtube.com/@dntrung044" target="_blank"><i
+                                             class="fa-brands fa-youtube"></i>Youtube</a></li>
                                  </ul>
                               </div>
                            </div>

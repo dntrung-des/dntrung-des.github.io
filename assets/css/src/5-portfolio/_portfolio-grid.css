@@ -81,20 +81,102 @@
   }
 }
 
+.tp-portfolio-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  height: 580px;
+}
+
+.tp-portfolio-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.tp-portfolio-item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tp-portfolio-item .tp-portfolio-thumb,
+.tp-portfolio-item .tp-portfolio-thumb.img-4 {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.tp-portfolio-item .tp-portfolio-thumb-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tp-portfolio-item .tp-portfolio-thumb-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  display: block;
+  transform: none !important;
+  will-change: auto !important;
+}
+
 .tp-portfolio-item:hover .tp-portfolio-thumb {
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  transform: scale(0.95);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
 .tp-portfolio-item:hover .tp-portfolio-thumb-img {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.06);
+  -moz-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  -o-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.tp-portfolio-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 4px 6px;
+}
+
+.tp-portfolio-content .blog-list__sm-category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tp-portfolio-content .blog-list__sm-category span {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  height: 28px;
+  line-height: 26px;
+  padding: 0 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .tp-portfolio-item:hover .tp-portfolio-meta-hover span:not(.tp-portfolio-meta-link) {
@@ -128,18 +210,71 @@
   color: var(--tp-common-white);
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+.tp-portfolio-title {
+  font-size: 26px;
+  color: var(--tp-common-white);
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.tp-portfolio-meta {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-portfolio-item-wrapper {
     padding-left: 0;
   }
+  .tp-portfolio-item {
+    padding: 16px;
+    height: 520px;
+  }
+  .tp-portfolio-item .tp-portfolio-thumb,
+  .tp-portfolio-item .tp-portfolio-thumb.img-4 {
+    height: 280px;
+    margin-bottom: 16px;
+  }
+  .tp-portfolio-title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
 }
 
-.tp-portfolio-title {
-  font-size: 30px;
-  color: var(--tp-common-white);
-  margin-bottom: 0;
-  font-weight: 700;
+@media (max-width: 767px) {
+  .tp-portfolio-item-wrapper {
+    padding-left: 0;
+  }
+  .tp-portfolio-item {
+    padding: 14px;
+    border-radius: 18px;
+    height: auto;
+  }
+  .tp-portfolio-item .tp-portfolio-thumb,
+  .tp-portfolio-item .tp-portfolio-thumb.img-4 {
+    height: 230px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+  }
+  .tp-portfolio-item .tp-portfolio-thumb-img img {
+    border-radius: 12px;
+  }
+  .tp-portfolio-content .blog-list__sm-category {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .tp-portfolio-content .blog-list__sm-category span {
+    font-size: 11px;
+    height: 25px;
+    line-height: 23px;
+    padding: 0 11px;
+  }
+  .tp-portfolio-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
 }
 
 .tp-portfolio-meta-count {
@@ -443,7 +578,9 @@
   overflow: hidden;
 }
 
-.tp-portfolio-item-3:hover .tp-portfolio-view-btn-3 {
+.tp-portfolio-item-3:hover .tp-portfolio-view-btn-3,
+.tp-portfolio-thumb:hover .tp-portfolio-view-btn-3,
+.tp-portfolio-item:hover .tp-portfolio-view-btn-3 {
   visibility: visible;
   opacity: 1;
 }
@@ -460,6 +597,7 @@
   opacity: 0;
   margin: -40px 0 0 -40px;
   pointer-events: none;
+  z-index: 3;
 }
 
 .tp-portfolio-view-btn-3 span {
@@ -489,8 +627,244 @@
 }
 
 /* --------------------------------------------------------------------------
+   Portfolio View Switcher & List View
+   -------------------------------------------------------------------------- */
+.portfolio-view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.portfolio-view-label {
+  font-family: var(--tp-ff-dmsans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.7);
+  user-select: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.portfolio-view-control-group {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  gap: 3px;
+}
+
+.portfolio-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  outline: none;
+}
+
+.portfolio-view-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-view-btn.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-view-btn svg {
+  display: block;
+}
+
+/* List View Mode (.is-list-view) */
+.is-list-view .row.gx-50 > [class*="col-"] {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.is-list-view .tp-portfolio-item {
+  height: auto;
+  margin-bottom: 40px !important;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+@media (min-width: 1200px) {
+  .is-list-view .tp-portfolio-item {
+    height: 428px;
+  }
+  .is-list-view .tp-portfolio-item a {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb,
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb.img-4 {
+    flex: 0 0 560px;
+    width: 560px;
+    height: 380px;
+    border-radius: 18px;
+    margin-bottom: 0;
+  }
+
+  .is-list-view .tp-portfolio-content {
+    flex: 1;
+    padding: 12px 24px 12px 0;
+    justify-content: center;
+  }
+
+  .is-list-view .tp-portfolio-content .blog-list__sm-category {
+    margin-bottom: 18px;
+    gap: 10px;
+  }
+
+  .is-list-view .tp-portfolio-content .blog-list__sm-category span {
+    font-size: 13px;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 16px;
+  }
+
+  .is-list-view .tp-portfolio-title {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+
+  .is-list-view .tp-portfolio-meta {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .is-list-view .tp-portfolio-item {
+    height: 388px;
+  }
+  .is-list-view .tp-portfolio-item a {
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb,
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb.img-4 {
+    flex: 0 0 480px;
+    width: 480px;
+    height: 340px;
+    border-radius: 16px;
+    margin-bottom: 0;
+  }
+
+  .is-list-view .tp-portfolio-content {
+    flex: 1;
+    padding: 10px 16px 10px 0;
+    justify-content: center;
+  }
+
+  .is-list-view .tp-portfolio-content .blog-list__sm-category {
+    margin-bottom: 16px;
+  }
+
+  .is-list-view .tp-portfolio-title {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .is-list-view .tp-portfolio-meta {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .is-list-view .tp-portfolio-item {
+    height: auto;
+    margin-bottom: 35px !important;
+    padding: 20px;
+  }
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb,
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb.img-4 {
+    height: 350px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+  }
+  .is-list-view .tp-portfolio-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .is-list-view .tp-portfolio-item {
+    height: auto;
+    margin-bottom: 28px !important;
+    padding: 14px;
+    border-radius: 18px;
+  }
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb,
+  .is-list-view .tp-portfolio-item .tp-portfolio-thumb.img-4 {
+    height: 240px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+  }
+  .is-list-view .tp-portfolio-title {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+}
+
+/* --------------------------------------------------------------------------
    4. Portfolio Grid Light Theme Overrides
    -------------------------------------------------------------------------- */
+html[tp-theme=tp-theme-light] .tp-portfolio-item {
+  background: #ffffff;
+  border: 1px solid rgba(2, 11, 24, 0.08);
+  box-shadow: 0 4px 20px rgba(2, 11, 24, 0.03);
+}
+
+html[tp-theme=tp-theme-light] .tp-portfolio-item:hover {
+  border-color: rgba(2, 11, 24, 0.16);
+  box-shadow: 0 16px 36px rgba(2, 11, 24, 0.08);
+}
+
+html[tp-theme=tp-theme-light] .portfolio-view-label {
+  color: rgba(2, 11, 24, 0.7);
+}
+
+html[tp-theme=tp-theme-light] .portfolio-view-control-group {
+  background: rgba(2, 11, 24, 0.04);
+  border-color: rgba(2, 11, 24, 0.12);
+}
+
+html[tp-theme=tp-theme-light] .portfolio-view-btn {
+  color: rgba(2, 11, 24, 0.5);
+}
+
+html[tp-theme=tp-theme-light] .portfolio-view-btn:hover {
+  color: var(--tp-common-black-5);
+  background: rgba(2, 11, 24, 0.08);
+}
+
+html[tp-theme=tp-theme-light] .portfolio-view-btn.active {
+  color: var(--tp-common-black-5);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(2, 11, 24, 0.12);
+}
 html[tp-theme=tp-theme-light] .tp-portfolio-title {
   color: var(--tp-common-black-5);
 }
@@ -523,7 +897,9 @@ html[tp-theme=tp-theme-light] .tp-project-3__area .tp-section-title-3 {
   color: var(--tp-common-black-5);
 }
 
-html[tp-theme=tp-theme-light] .blog-list__sm-category span {
+html[tp-theme=tp-theme-light] .blog-list__sm-category span,
+html[tp-theme=tp-theme-light] .tp-portfolio-content .blog-list__sm-category span {
   color: var(--tp-common-black-5);
-  border: 1px solid rgba(2, 11, 24, 0.1);
+  border: 1px solid rgba(2, 11, 24, 0.12);
+  background: rgba(2, 11, 24, 0.03);
 }

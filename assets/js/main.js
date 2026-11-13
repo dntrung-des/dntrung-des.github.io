@@ -773,9 +773,9 @@
 		$('body').removeClass('cursor-white')
 	});
 
-	// 14. Portfolio Hover Reveal Cursor Follow (.tp-portfolio-view-btn-3, .tp-hover-reveal-text)
+	// 14. Portfolio Hover Reveal Cursor Follow (.tp-portfolio-view-btn-3, .tp-hover-reveal-text, .tp-portfolio-thumb)
 	(function () {
-		var hoverItems = document.querySelectorAll('.tp-portfolio-item-3, .tp-hover-reveal-text, .tp-portfolio-item-2');
+		var hoverItems = document.querySelectorAll('.tp-portfolio-item-3, .tp-hover-reveal-text, .tp-portfolio-item-2, .tp-portfolio-thumb');
 		if (!hoverItems.length) return;
 
 		hoverItems.forEach(function (item) {
@@ -794,6 +794,50 @@
 			item.addEventListener('mouseenter', updatePosition);
 			item.addEventListener('mousemove', updatePosition);
 		});
+	})();
+
+	// 15. Portfolio View Switcher (Gallery View / List View)
+	(function () {
+		var wrap = document.getElementById('portfolioTabWrap') || document.querySelector('.blog-list__tab-wrap');
+		var galleryBtn = document.getElementById('viewGalleryBtn');
+		var listBtn = document.getElementById('viewListBtn');
+		var label = document.getElementById('portfolioViewLabel');
+
+		if (!wrap || !galleryBtn || !listBtn) return;
+
+		function setViewMode(mode) {
+			if (mode === 'list') {
+				wrap.classList.add('is-list-view');
+				listBtn.classList.add('active');
+				galleryBtn.classList.remove('active');
+				if (label) label.textContent = 'List View';
+				try { localStorage.setItem('portfolio_view_mode', 'list'); } catch (e) {}
+			} else {
+				wrap.classList.remove('is-list-view');
+				galleryBtn.classList.add('active');
+				listBtn.classList.remove('active');
+				if (label) label.textContent = 'Gallery View';
+				try { localStorage.setItem('portfolio_view_mode', 'gallery'); } catch (e) {}
+			}
+		}
+
+		galleryBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+			setViewMode('gallery');
+		});
+
+		listBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+			setViewMode('list');
+		});
+
+		// Restore saved preference if any (default is gallery view)
+		try {
+			var savedMode = localStorage.getItem('portfolio_view_mode');
+			if (savedMode === 'list') {
+				setViewMode('list');
+			}
+		} catch (e) {}
 	})();
 
 	// Nice Select
